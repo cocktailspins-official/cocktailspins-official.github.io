@@ -29,9 +29,8 @@
         .stat-card strong { color: var(--gold); font-size: 1.4em; display: block; }
         .stat-card span { color: #888; font-size: 0.7em; text-transform: uppercase; }
 
-        /* PERFORMANCE SECTION - UPDATED NUMBERS */
         .perf-box { margin-top: 25px; background: rgba(83, 252, 24, 0.03); border: 1px solid rgba(83, 252, 24, 0.1); border-radius: 20px; padding: 20px; }
-        .perf-title { color: var(--kick-green); font-size: 0.9em; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .perf-title { color: var(--kick-green); font-size: 0.9em; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
         .perf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .perf-item { border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; }
         .perf-item small { display: block; color: #666; font-size: 0.75em; }
@@ -41,13 +40,15 @@
 
         /* LINKS GRID */
         .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 30px; }
-        .btn { padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .btn { padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; color: white; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; }
+        .btn small { font-size: 0.7em; opacity: 0.8; font-weight: normal; margin-top: 2px; }
         .btn:hover { transform: translateY(-3px); filter: brightness(1.2); }
         
-        .btn-reviews { background: var(--gold); color: black; grid-column: 1 / -1; font-size: 1.1em; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); margin-bottom: 10px; }
+        .btn-reviews { background: var(--gold); color: black; grid-column: 1 / -1; font-size: 1.1em; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); margin-bottom: 10px; flex-direction: row; }
         .btn-kick { background: var(--kick-green); color: black; }
         .btn-twitch { background: #9146FF; }
-        .btn-tg { background: #0088cc; }
+        .btn-tg-group { background: #0088cc; }
+        .btn-tg-personal { background: #229ED9; border: 1px solid rgba(255,255,255,0.2); }
         .btn-insta { background: linear-gradient(45deg, #f09433, #e31682, #8a3ab9); }
         .btn-x { background: #000; border: 1px solid #444; }
         .btn-gmail { background: #ea4335; }
@@ -83,13 +84,11 @@
 
     <div class="business-container">
         <div class="biz-title">📊 Partner Performance Dashboard</div>
-        
         <div class="stats-dashboard">
             <div class="stat-card"><strong>700+</strong><span>Avg. Viewers</span></div>
             <div class="stat-card"><strong>4+ Years</strong><span>Experience</span></div>
             <div class="stat-card"><strong>High</strong><span>Retention</span></div>
         </div>
-
         <div class="perf-box">
             <div class="perf-title">📈 Monthly Conversion Averages</div>
             <div class="perf-grid">
@@ -99,7 +98,6 @@
                 <div class="perf-item"><small>Compliance Rate</small><b>100%</b></div>
             </div>
         </div>
-
         <div class="geo-list">
             <span>🇭🇺 Hungary</span> • <span>🇸🇰 Slovakia</span> • <span>🇨🇿 Czechia</span> • <span>🇩🇪 Germany</span> • <span>🌍 EU Global</span>
         </div>
@@ -108,12 +106,16 @@
     <div class="links-grid">
         <a href="reviews.html" class="btn btn-reviews">⭐ EXPLORE REVIEWS & BONUSES ⭐</a>
         
-        <a href="https://kick.com/cocktailspins" target="_blank" class="btn btn-kick">Kick.com</a>
-        <a href="https://www.twitch.tv/cocktailspins" target="_blank" class="btn btn-twitch">Twitch.tv</a>
-        <a href="https://t.me/cocktailspinowner" target="_blank" class="btn btn-tg">Telegram</a>
-        <a href="https://www.instagram.com/cocktailspins/" target="_blank" class="btn btn-insta">Instagram</a>
-        <a href="https://x.com/Cocktailspins" target="_blank" class="btn btn-x">X (Twitter)</a>
-        <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">Email Me</a>
+        <a href="https://kick.com/cocktailspins" target="_blank" class="btn btn-kick">Kick.com<small>Live Stream</small></a>
+        <a href="https://www.twitch.tv/cocktailspins" target="_blank" class="btn btn-twitch">Twitch.tv<small>Community</small></a>
+        
+        <a href="https://t.me/cocktailspinowner" target="_blank" class="btn btn-tg-group">Telegram Group<small>Community & News</small></a>
+        
+        <a href="https://t.me/cocktailsp" target="_blank" class="btn btn-tg-personal">Business Contact<small>Personal Telegram</small></a>
+        
+        <a href="https://www.instagram.com/cocktailspins/" target="_blank" class="btn btn-insta">Instagram<small>Daily Updates</small></a>
+        <a href="https://x.com/Cocktailspins" target="_blank" class="btn btn-x">X (Twitter)<small>Social</small></a>
+        <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">Email Me<small>Business Inquiry</small></a>
     </div>
 
     <div class="footer">Professional Casino Brand Promoter | 2026 Portfolio</div>
