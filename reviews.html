@@ -1,106 +1,123 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casino Reviews | Cocktailspins</title>
+    <title>Casino Reviews | Cocktailspins Ecosystem</title>
     <style>
         :root { --gold: #d4af37; --kick-green: #53fc18; --bg-black: #0a0a0a; }
-        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; text-align: center; }
+        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; text-align: center; }
         .container { max-width: 850px; margin: 0 auto; }
         
-        h1 { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 40px; }
+        h1 { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-size: 2em; }
+        .subtitle { color: #888; margin-bottom: 40px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; }
 
         .review-card {
             background: linear-gradient(145deg, #1a1a1a, #000);
-            border: 2px solid var(--gold);
-            border-radius: 20px;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
             padding: 25px;
             margin-bottom: 30px;
             text-align: left;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: 0.3s;
         }
+        .review-card:hover { transform: translateY(-5px); border-color: #fff; }
 
         .casino-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 15px; }
-        .casino-logo { max-width: 150px; max-height: 60px; object-fit: contain; border: 1px solid rgba(212, 175, 55, 0.3); padding: 5px; border-radius: 5px; background: #000; }
-        .rating { color: var(--gold); font-weight: bold; font-size: 1.2em; }
+        .casino-logo { max-width: 150px; max-height: 55px; object-fit: contain; background: #000; padding: 8px; border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.2); }
+        .rating { color: var(--gold); font-weight: bold; font-size: 1.1em; background: rgba(212, 175, 55, 0.1); padding: 5px 15px; border-radius: 20px; }
 
-        .highlights { margin: 15px 0; padding-left: 20px; color: #ccc; }
-        .highlights li { margin-bottom: 8px; list-style-type: '✔'; padding-left: 10px; }
+        .highlights { margin: 15px 0; padding: 0; list-style: none; }
+        .highlights li { margin-bottom: 10px; padding-left: 30px; position: relative; color: #ccc; font-size: 0.95em; }
+        .highlights li::before { content: "★"; position: absolute; left: 0; color: var(--gold); }
 
-        .promo-banner { background: rgba(83, 252, 24, 0.1); border: 1px dashed var(--kick-green); padding: 12px; border-radius: 10px; color: var(--kick-green); font-weight: bold; text-align: center; margin: 20px 0; }
+        .promo-box { 
+            background: rgba(83, 252, 24, 0.05); 
+            border: 1px dashed var(--kick-green); 
+            padding: 15px; 
+            border-radius: 15px; 
+            color: var(--kick-green); 
+            font-weight: bold; 
+            text-align: center; 
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
 
-        .btn-affiliate {
+        .btn-play {
             background: var(--gold);
             color: black;
             text-decoration: none;
-            padding: 15px;
-            border-radius: 10px;
+            padding: 18px;
+            border-radius: 12px;
             font-weight: bold;
             text-transform: uppercase;
             display: block;
             text-align: center;
             transition: 0.3s;
+            letter-spacing: 1px;
         }
-        .btn-affiliate:hover { background: #fff; box-shadow: 0 0 20px var(--gold); }
+        .btn-play:hover { background: #fff; box-shadow: 0 0 25px var(--gold); }
 
-        .back-btn { display: inline-block; margin-top: 40px; color: #888; text-decoration: none; border: 1px solid #333; padding: 10px 25px; border-radius: 30px; transition: 0.3s; }
+        .back-btn { display: inline-block; margin-top: 50px; color: #666; text-decoration: none; border-bottom: 1px solid #333; padding-bottom: 5px; transition: 0.3s; }
         .back-btn:hover { color: var(--gold); border-color: var(--gold); }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Official Casino Reviews</h1>
+        <h1>Casino Reviews</h1>
+        <p class="subtitle">Trusted & Verified Partner Brands</p>
 
         <div class="review-card">
             <div class="casino-header">
-                <img src="cropped-cropped-vavada-logo.png" class="casino-logo">
-                <div class="rating">Rating: 10/10 ⭐</div>
+                <img src="cropped-cropped-vavada-logo.png" class="casino-logo" alt="Vavada">
+                <div class="rating">Rating: 10/10</div>
             </div>
-            <h3>Prečo hrať vo Vavada?</h3>
+            <h3>Vavada Casino</h3>
             <ul class="highlights">
-                <li>Okamžité výbery (často do 15 minút)</li>
-                <li>Žiadne otravné overovanie (No KYC) pre väčšinu hráčov</li>
-                <li>Široký výber exkluzívnych slotov a live stolov</li>
-                <li>Pravidelné free turnaje o reálne peniaze</li>
+                <li>Instant withdrawals with high daily limits</li>
+                <li>No-KYC required for most players</li>
+                <li>Extensive library of exclusive slots and live tables</li>
+                <li>Weekly free-to-enter tournaments with real cash prizes</li>
             </ul>
-            <div class="promo-banner">UVÍTACÍ BONUS: 100 FREE SPINS + 100% BONUS</div>
-            <a href="TU_VLOZ_SVOJ_VAVADA_LINK" target="_blank" class="btn-affiliate">Claim Bonus & Play Now</a>
+            <div class="promo-box">WELCOME BONUS: 100 FREE SPINS + 100% MATCH</div>
+            <a href="YOUR_AFFILIATE_LINK" target="_blank" class="btn-play">Claim Bonus & Play Now</a>
         </div>
 
         <div class="review-card">
             <div class="casino-header">
-                <img src="500-Casino.png" class="casino-logo">
-                <div class="rating">Rating: 9.8/10 ⭐</div>
+                <img src="500-Casino.png" class="casino-logo" alt="500 Casino">
+                <div class="rating">Rating: 9.8/10</div>
             </div>
-            <h3>Prečo vybrať 500 Casino?</h3>
+            <h3>500 Casino</h3>
             <ul class="highlights">
-                <li>Prepracovaný VIP systém a denné rakebacky</li>
-                <li>Špičková podpora pre kryptomeny aj FIAT</li>
-                <li>Unikátne koleso šťastia a komunitné súťaže</li>
+                <li>Industry-leading Rakeback and VIP rewards system</li>
+                <li>Fast Crypto & FIAT deposits/withdrawals</li>
+                <li>Daily rewards and unique community events</li>
             </ul>
-            <div class="promo-banner">POUŽI KÓD: COCKTAILSPINS</div>
-            <a href="TU_VLOZ_SVOJ_500_LINK" target="_blank" class="btn-affiliate">Claim Bonus & Play Now</a>
+            <div class="promo-box">USE PROMO CODE: COCKTAILSPINS</div>
+            <a href="YOUR_AFFILIATE_LINK" target="_blank" class="btn-play">Claim Bonus & Play Now</a>
         </div>
 
         <div class="review-card">
             <div class="casino-header">
-                <img src="1000018512.jpg" class="casino-logo">
-                <div class="rating">Rating: 9.5/10 ⭐</div>
+                <img src="royalsea.png" class="casino-logo" alt="RoyalSea">
+                <div class="rating">Rating: 9.6/10</div>
             </div>
-            <h3>Výhody kasína Wazamba</h3>
+            <h3>RoyalSea Casino</h3>
             <ul class="highlights">
-                <li>Gamifikovaný systém (vlastná postavička a obchod)</li>
-                <li>Obrovské množstvo týždenných promo akcií</li>
-                <li>Vynikajúca mobilná optimalizácia</li>
+                <li>Premium experience tailored for high-rollers</li>
+                <li>Exclusive VIP concierge and loyalty bonuses</li>
+                <li>High-limit tables and bespoke gaming environment</li>
             </ul>
-            <div class="promo-banner">BONUS: AŽ 500€ + 200 FREE SPINS</div>
-            <a href="TU_VLOZ_SVOJ_WAZAMBA_LINK" target="_blank" class="btn-affiliate">Claim Bonus & Play Now</a>
+            <div class="promo-box">REWARD: EXCLUSIVE VIP ACCESS</div>
+            <a href="YOUR_AFFILIATE_LINK" target="_blank" class="btn-play">Claim Bonus & Play Now</a>
         </div>
 
-        <a href="index.html" class="back-btn">← Back to Portfolio</a>
+        <a href="index.html" class="back-btn">← Back to Business Profile</a>
     </div>
 
 </body>
 </html>
+
