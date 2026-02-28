@@ -45,11 +45,7 @@
             box-shadow: 0 0 20px var(--gold);
         }
 
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-            color: var(--gold);
-        }
+        h1 { font-size: 2.5em; margin: 0; color: var(--gold); }
 
         .experience {
             color: #888;
@@ -59,26 +55,28 @@
             font-size: 0.9em;
         }
 
-        .stats-container {
+        /* Sekcia Brands */
+        .brands-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 15px;
+        }
+        .brands-title {
+            font-size: 0.7em;
+            color: var(--gold);
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .brands-list {
             display: flex;
             justify-content: center;
+            gap: 20px;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-
-        .stat-item {
-            background: rgba(255,255,255,0.05);
-            padding: 10px 15px;
-            border-radius: 12px;
-            border-bottom: 2px solid var(--gold);
-            min-width: 100px;
-        }
-
-        .stat-item strong {
-            display: block;
-            font-size: 1.2em;
-            color: var(--gold);
+            opacity: 0.8;
+            font-weight: bold;
+            font-size: 0.9em;
         }
 
         .links-grid {
@@ -104,19 +102,24 @@
 
         .btn:hover { transform: scale(1.03); }
 
+        /* Nové tlačidlo pre recenzie */
+        .btn-reviews { 
+            background: var(--gold); 
+            color: #000; 
+            grid-column: 1 / -1; 
+            margin-top: 10px;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
         .btn-kick { background: var(--kick-green); color: #000; }
         .btn-twitch { background: var(--twitch-purple); }
         .btn-insta { background: var(--insta-pink); }
         .btn-gmail { background: var(--gmail-red); }
         .btn-telegram { background: var(--telegram-blue); }
         .btn-x { background: #000; border: 1px solid #444; }
-        .btn-heylink { border: 2px solid var(--gold); color: var(--gold); grid-column: 1 / -1; margin-top: 10px;}
+        .btn-heylink { border: 1px solid #444; color: #888; font-size: 0.7em; }
 
-        .footer-info {
-            margin-top: 30px;
-            font-size: 0.8em;
-            color: #555;
-        }
+        .footer-info { margin-top: 30px; font-size: 0.8em; color: #555; }
     </style>
 </head>
 <body>
@@ -127,20 +130,23 @@
         <h1>COCKTAILSPINS</h1>
         <div class="experience">4+ YEARS INDUSTRY EXPERIENCE</div>
 
-        <div class="stats-container">
-            <div class="stat-item"><strong>700+</strong>Viewers</div>
-            <div class="stat-item"><strong>100%</strong>Clean</div>
-            <div class="stat-item"><strong>HU/SK/CZ</strong>GEOs</div>
+        <div class="brands-section">
+            <div class="brands-title">Trusted Partners</div>
+            <div class="brands-list">
+                <span>STAKE</span> • <span>ROOBET</span> • <span>GAMEDOM</span> • <span>ROLLBIT</span>
+            </div>
         </div>
 
         <div class="links-grid">
+            <a href="reviews.html" class="btn btn-reviews">⭐ View Casino Reviews ⭐</a>
+
             <a href="https://kick.com/cocktailspins" class="btn btn-kick">Kick Live</a>
             <a href="https://www.twitch.tv/cocktailspins" class="btn btn-twitch">Twitch</a>
             <a href="https://www.instagram.com/cocktailspins/" class="btn btn-insta">Instagram</a>
             <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">E-mail</a>
             <a href="https://t.me/cocktailspinowner" class="btn btn-telegram">Telegram</a>
             <a href="https://x.com/Cocktailspins" class="btn btn-x">X (Twitter)</a>
-            <a href="https://heylink.me/cocktailspins/" class="btn btn-heylink">All Promo Links (HeyLink)</a>
+            <a href="https://heylink.me/cocktailspins/" class="btn btn-heylink" style="grid-column: 1 / -1;">All Promo Links</a>
         </div>
 
         <div class="footer-info">Professional Casino Brand Promoter</div>
@@ -148,3 +154,4 @@
 
 </body>
 </html>
+
