@@ -23,6 +23,7 @@
             display: flex;
             justify-content: center;
             padding: 20px;
+            overflow-x: hidden; /* Dôležité pre animáciu */
         }
 
         .main-card {
@@ -34,6 +35,8 @@
             padding: 30px;
             text-align: center;
             box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
+            position: relative;
+            z-index: 1;
         }
 
         .logo {
@@ -45,7 +48,7 @@
             box-shadow: 0 0 20px var(--gold);
         }
 
-        h1 { font-size: 2.5em; margin: 0; color: var(--gold); }
+        h1 { font-size: 2.5em; margin: 0; color: var(--gold); text-transform: uppercase; }
 
         .experience {
             color: #888;
@@ -55,30 +58,52 @@
             font-size: 0.9em;
         }
 
-        /* Sekcia Brands */
-        .brands-section {
-            margin: 20px 0;
-            padding: 15px;
-            background: rgba(212, 175, 55, 0.05);
-            border-radius: 15px;
-        }
-        .brands-title {
-            font-size: 0.7em;
-            color: var(--gold);
-            letter-spacing: 3px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-        .brands-list {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            opacity: 0.8;
-            font-weight: bold;
-            font-size: 0.9em;
+        /* --- ŠTÝL PRE ANIMOVANÝ LOGO SLIDER --- */
+        .logo-ticker-container {
+            width: 100%;
+            overflow: hidden;
+            background: rgba(212, 175, 55, 0.03);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 15px 0;
+            margin: 25px 0;
+            position: relative;
         }
 
+        .logo-ticker-track {
+            display: flex;
+            width: calc(250px * 10); /* Šírka jedného loga * počet log (duplikovaných) */
+            animation: scroll 20s linear infinite;
+        }
+
+        .logo-item {
+            width: 200px; /* Šírka rámčeka */
+            height: 80px; /* Výška rámčeka */
+            margin: 0 25px; /* Medzera medzi logami */
+            border: 2px solid var(--gold); /* Zlatý rámček */
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.5);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+            color: white; font-weight: bold; font-size: 1.2em; /* Provizórny text */
+        }
+
+        /* Provizórne logá - neskôr nahradíš obrázkami */
+        .logo-item:nth-child(1), .logo-item:nth-child(6) { background: #1a1a1a; color: #fff; } /* Stake */
+        .logo-item:nth-child(2), .logo-item:nth-child(7) { background: #8833ff; color: #fff; } /* Roobet */
+        .logo-item:nth-child(3), .logo-item:nth-child(8) { background: #ffcc00; color: #000; } /* Gamedom */
+        .logo-item:nth-child(4), .logo-item:nth-child(9) { background: #ff3333; color: #fff; } /* Rollbit */
+        .logo-item:nth-child(5), .logo-item:nth-child(10) { background: #33ff33; color: #000; } /* Iné */
+
+        /* Animácia pohybu zprava doľava */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 5)); } /* Posun o polovicu celkovej šírky tracku */
+        }
+
+        /* --- OSTATNÉ PRVKY --- */
         .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -98,16 +123,17 @@
             font-size: 0.85em;
             transition: 0.3s;
             color: white;
+            position: relative;
+            z-index: 2;
         }
 
         .btn:hover { transform: scale(1.03); }
 
-        /* Nové tlačidlo pre recenzie */
         .btn-reviews { 
             background: var(--gold); 
             color: #000; 
             grid-column: 1 / -1; 
-            margin-top: 10px;
+            margin-bottom: 20px;
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
         }
 
@@ -130,15 +156,23 @@
         <h1>COCKTAILSPINS</h1>
         <div class="experience">4+ YEARS INDUSTRY EXPERIENCE</div>
 
-        <div class="brands-section">
-            <div class="brands-title">Trusted Partners</div>
-            <div class="brands-list">
-                <span>STAKE</span> • <span>ROOBET</span> • <span>GAMEDOM</span> • <span>ROLLBIT</span>
+        <div class="logo-ticker-container">
+            <div class="logo-ticker-track">
+                <div class="logo-item">STAKE</div>
+                <div class="logo-item">ROOBET</div>
+                <div class="logo-item">GAMEDOM</div>
+                <div class="logo-item">ROLLBIT</div>
+                <div class="logo-item">PARTNER X</div>
+                <div class="logo-item">STAKE</div>
+                <div class="logo-item">ROOBET</div>
+                <div class="logo-item">GAMEDOM</div>
+                <div class="logo-item">ROLLBIT</div>
+                <div class="logo-item">PARTNER X</div>
             </div>
         </div>
 
         <div class="links-grid">
-            <a href="reviews.html" class="btn btn-reviews">⭐ View Casino Reviews ⭐</a>
+            <a href="reviews.html" class="btn btn-reviews">⭐ CASINO REVIEWS ⭐</a>
 
             <a href="https://kick.com/cocktailspins" class="btn btn-kick">Kick Live</a>
             <a href="https://www.twitch.tv/cocktailspins" class="btn btn-twitch">Twitch</a>
