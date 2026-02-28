@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,20 +20,22 @@
         .ticker-item img { max-width: 85%; max-height: 75%; object-fit: contain; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-180px * 7)); } }
 
-        /* BUSINESS SECTION */
-        .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 25px; padding: 30px; margin: 30px 0; text-align: left; position: relative; overflow: hidden; }
-        .business-container::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gold); }
-        
+        /* BUSINESS & STATS SECTION */
+        .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 25px; padding: 30px; margin: 30px 0; text-align: left; border-left: 4px solid var(--gold); }
         .biz-title { color: var(--gold); font-size: 1.4em; font-weight: bold; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px; }
-        .stat-box { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; border: 1px solid rgba(212, 175, 55, 0.1); }
-        .stat-box strong { color: var(--gold); display: block; font-size: 1.2em; }
+        
+        .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 25px; }
+        .stat-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px; border: 1px solid rgba(212,175,55,0.1); text-align: center; }
+        .stat-card span { display: block; color: #888; font-size: 0.8em; text-transform: uppercase; margin-bottom: 5px; }
+        .stat-card strong { color: var(--gold); font-size: 1.5em; display: block; }
 
-        .highlights-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; }
+        .geo-list { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; margin-top: 20px; background: rgba(212, 175, 55, 0.05); padding: 15px; border-radius: 15px; }
+        .geo-item { font-weight: bold; font-size: 0.9em; display: flex; align-items: center; gap: 5px; }
+        .geo-item i { color: var(--gold); }
+
+        .highlights-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin: 20px 0; }
         .highlights-list li { padding-left: 25px; position: relative; font-size: 0.9em; color: #ddd; }
         .highlights-list li::before { content: "✔"; position: absolute; left: 0; color: var(--kick-green); font-weight: bold; }
-
-        .about-text { font-size: 0.95em; color: #bbb; margin: 20px 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
 
         /* LINKS */
         .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
@@ -45,7 +47,7 @@
         .btn-tg { background: #0088cc; }
         .btn-x { background: #000; border: 1px solid #333; }
 
-        .footer { margin-top: 40px; font-size: 0.8em; color: #555; font-style: italic; }
+        .footer { margin-top: 40px; font-size: 0.8em; color: #555; }
     </style>
 </head>
 <body>
@@ -75,40 +77,43 @@
     </div>
 
     <div class="business-container">
-        <div class="biz-title">🚀 Professional Casino Partnership</div>
+        <div class="biz-title">🚀 Partner Performance Portfolio</div>
         
-        <div class="stats-grid">
-            <div class="stat-box"><strong>700+</strong>Avg. Live Viewers</div>
-            <div class="stat-box"><strong>4+ Years</strong>Industry Exp.</div>
-        </div>
-
-        <ul class="highlights-list">
-            <li>100% Transparent Audience</li>
-            <li>No Negative Historical Reviews</li>
-            <li>Strictly Casino-Focused Content</li>
-            <li>Zero Hit & Run Policy</li>
-            <li>Full Regulatory Compliance</li>
-            <li>Global Conversion Engine (EU Focus)</li>
-        </ul>
-
-        <div class="about-text">
-            Hi Affiliate Manager, I'm <strong>Tamás</strong>. I run Cocktailspins, a high-energy brand built exclusively for casino promotion. My ecosystem ensures zero "marketing waste" by targeting 100% active players across Kick, X, and Telegram.
-        </div>
-        
-        <p style="font-size: 0.85em; color: var(--gold); border-left: 2px solid var(--gold); padding-left: 10px;">
-            Looking for serious, long-term collaborations. Let's bring your brand to the top.
+        <p style="font-size: 0.9em; color: #bbb; margin-bottom: 20px;">
+            Hi Affiliate Manager, I'm <strong>Tamás</strong>. I drive high-intent traffic through my 100% casino-focused ecosystem. My audience consists of active players with high retention rates.
         </p>
+
+        <div class="stats-dashboard">
+            <div class="stat-card"><span>Average Reach</span><strong>700+ Live</strong></div>
+            <div class="stat-card"><span>Experience</span><strong>4+ Years</strong></div>
+            <div class="stat-card"><span>Audience</span><strong>100% Gambling</strong></div>
+        </div>
+
+        <div style="margin-top: 25px; color: var(--gold); font-weight: bold; font-size: 0.9em; text-transform: uppercase;">Top Converting GEOs:</div>
+        <div class="geo-list">
+            <div class="geo-item">🇭🇺 Hungary</div>
+            <div class="geo-item">🇸🇰 Slovakia</div>
+            <div class="geo-item">🇨🇿 Czechia</div>
+            <div class="geo-item">🇩🇪 Germany</div>
+            <div class="geo-item">🌍 Global EU</div>
+        </div>
+
+        <ul class="highlights-list" style="margin-top: 25px;">
+            <li>Zero Negative History</li>
+            <li>Full Regulatory Compliance</li>
+            <li>High Player Retention (LTV)</li>
+            <li>No "Hit & Run" Record</li>
+        </ul>
     </div>
 
     <div class="links-grid">
-        <a href="reviews.html" class="btn btn-reviews">⭐ EXPLORE CASINO REVIEWS ⭐</a>
+        <a href="reviews.html" class="btn btn-reviews">⭐ CASINO REVIEWS & BONUSES ⭐</a>
         <a href="https://kick.com/cocktailspins" class="btn btn-kick">Kick Live</a>
         <a href="https://t.me/cocktailspinowner" class="btn btn-tg">Telegram</a>
         <a href="https://x.com/Cocktailspins" class="btn btn-x">X / Twitter</a>
-        <a href="https://www.instagram.com/cocktailspins/" class="btn btn-insta">Instagram</a>
     </div>
 
-    <div class="footer">Tamás | Cocktailspins - Dedicated Brand Promoter</div>
+    <div class="footer">Tamás | Cocktailspins - Professional Brand Promoter</div>
 </div>
 
 </body>
