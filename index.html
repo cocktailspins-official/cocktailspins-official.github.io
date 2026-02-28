@@ -20,32 +20,29 @@
         .ticker-item img { max-width: 85%; max-height: 75%; object-fit: contain; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-180px * 7)); } }
 
-        /* BUSINESS & STATS SECTION */
+        /* BUSINESS SECTION */
         .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 25px; padding: 30px; margin: 30px 0; text-align: left; border-left: 4px solid var(--gold); }
-        .biz-title { color: var(--gold); font-size: 1.4em; font-weight: bold; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .biz-title { color: var(--gold); font-size: 1.4em; font-weight: bold; margin-bottom: 15px; }
         
-        .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 25px; }
-        .stat-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px; border: 1px solid rgba(212,175,55,0.1); text-align: center; }
-        .stat-card span { display: block; color: #888; font-size: 0.8em; text-transform: uppercase; margin-bottom: 5px; }
-        .stat-card strong { color: var(--gold); font-size: 1.5em; display: block; }
+        .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
+        .stat-card { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; border: 1px solid rgba(212,175,55,0.1); text-align: center; }
+        .stat-card strong { color: var(--gold); font-size: 1.3em; display: block; }
+        .stat-card span { color: #888; font-size: 0.75em; text-transform: uppercase; }
 
-        .geo-list { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; margin-top: 20px; background: rgba(212, 175, 55, 0.05); padding: 15px; border-radius: 15px; }
-        .geo-item { font-weight: bold; font-size: 0.9em; display: flex; align-items: center; gap: 5px; }
-        .geo-item i { color: var(--gold); }
+        .geo-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px; background: rgba(212, 175, 55, 0.05); padding: 12px; border-radius: 15px; font-size: 0.9em; font-weight: bold; }
 
-        .highlights-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin: 20px 0; }
-        .highlights-list li { padding-left: 25px; position: relative; font-size: 0.9em; color: #ddd; }
-        .highlights-list li::before { content: "✔"; position: absolute; left: 0; color: var(--kick-green); font-weight: bold; }
-
-        /* LINKS */
-        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
-        .btn { padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8em; transition: 0.3s; color: white; display: flex; align-items: center; justify-content: center; }
-        .btn:hover { transform: translateY(-3px); filter: brightness(1.2); }
-        .btn-reviews { background: var(--gold); color: black; grid-column: 1 / -1; margin-bottom: 10px; font-size: 1em; }
+        /* LINKS GRID - ALL CHANNELS RETURNED */
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 30px; }
+        .btn { padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .btn:hover { transform: translateY(-3px); filter: brightness(1.2); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        
+        .btn-reviews { background: var(--gold); color: black; grid-column: 1 / -1; font-size: 1.1em; margin-bottom: 10px; }
         .btn-kick { background: var(--kick-green); color: black; }
-        .btn-insta { background: #E1306C; }
+        .btn-twitch { background: #9146FF; }
         .btn-tg { background: #0088cc; }
-        .btn-x { background: #000; border: 1px solid #333; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #e31682, #8a3ab9); }
+        .btn-x { background: #000; border: 1px solid #444; }
+        .btn-gmail { background: #ea4335; }
 
         .footer { margin-top: 40px; font-size: 0.8em; color: #555; }
     </style>
@@ -78,43 +75,30 @@
 
     <div class="business-container">
         <div class="biz-title">🚀 Partner Performance Portfolio</div>
-        
-        <p style="font-size: 0.9em; color: #bbb; margin-bottom: 20px;">
-            Hi Affiliate Manager, I'm <strong>Tamás</strong>. I drive high-intent traffic through my 100% casino-focused ecosystem. My audience consists of active players with high retention rates.
-        </p>
-
         <div class="stats-dashboard">
-            <div class="stat-card"><span>Average Reach</span><strong>700+ Live</strong></div>
-            <div class="stat-card"><span>Experience</span><strong>4+ Years</strong></div>
-            <div class="stat-card"><span>Audience</span><strong>100% Gambling</strong></div>
+            <div class="stat-card"><strong>700+ LIVE</strong><span>Avg. Viewers</span></div>
+            <div class="stat-card"><strong>4+ YEARS</strong><span>Industry Exp.</span></div>
+            <div class="stat-card"><strong>100%</strong><span>Gambling Focus</span></div>
         </div>
-
-        <div style="margin-top: 25px; color: var(--gold); font-weight: bold; font-size: 0.9em; text-transform: uppercase;">Top Converting GEOs:</div>
         <div class="geo-list">
-            <div class="geo-item">🇭🇺 Hungary</div>
-            <div class="geo-item">🇸🇰 Slovakia</div>
-            <div class="geo-item">🇨🇿 Czechia</div>
-            <div class="geo-item">🇩🇪 Germany</div>
-            <div class="geo-item">🌍 Global EU</div>
+            <span>🇭🇺 HU</span><span>🇸🇰 SK</span><span>🇨🇿 CZ</span><span>🇩🇪 DE</span><span>🌍 Global EU</span>
         </div>
-
-        <ul class="highlights-list" style="margin-top: 25px;">
-            <li>Zero Negative History</li>
-            <li>Full Regulatory Compliance</li>
-            <li>High Player Retention (LTV)</li>
-            <li>No "Hit & Run" Record</li>
-        </ul>
     </div>
 
     <div class="links-grid">
-        <a href="reviews.html" class="btn btn-reviews">⭐ CASINO REVIEWS & BONUSES ⭐</a>
-        <a href="https://kick.com/cocktailspins" class="btn btn-kick">Kick Live</a>
-        <a href="https://t.me/cocktailspinowner" class="btn btn-tg">Telegram</a>
-        <a href="https://x.com/Cocktailspins" class="btn btn-x">X / Twitter</a>
+        <a href="reviews.html" class="btn btn-reviews">⭐ EXPLORE REVIEWS & BONUSES ⭐</a>
+        
+        <a href="https://kick.com/cocktailspins" target="_blank" class="btn btn-kick">Kick.com</a>
+        <a href="https://www.twitch.tv/cocktailspins" target="_blank" class="btn btn-twitch">Twitch.tv</a>
+        <a href="https://t.me/cocktailspinowner" target="_blank" class="btn btn-tg">Telegram</a>
+        <a href="https://www.instagram.com/cocktailspins/" target="_blank" class="btn btn-insta">Instagram</a>
+        <a href="https://x.com/Cocktailspins" target="_blank" class="btn btn-x">X (Twitter)</a>
+        <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">E-mail Me</a>
     </div>
 
-    <div class="footer">Tamás | Cocktailspins - Professional Brand Promoter</div>
+    <div class="footer">Tamás | Cocktailspins - Dedicated Brand Promoter</div>
 </div>
 
 </body>
 </html>
+
