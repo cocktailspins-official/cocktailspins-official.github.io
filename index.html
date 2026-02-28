@@ -10,6 +10,8 @@
             --kick-green: #53fc18;
             --twitch-purple: #9146ff;
             --telegram-blue: #0088cc;
+            --insta-pink: #e1306c;
+            --gmail-red: #ea4335;
             --x-white: #ffffff;
             --bg-black: #0a0a0a;
         }
@@ -79,7 +81,6 @@
             color: var(--gold);
         }
 
-        /* Tlačidlá pre siete */
         .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -102,13 +103,16 @@
 
         .btn:hover {
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .btn-kick { background: var(--kick-green); color: #000; }
         .btn-twitch { background: var(--twitch-purple); color: #fff; }
-        .btn-heylink { border: 2px solid var(--gold); color: var(--gold); }
+        .btn-insta { background: var(--insta-pink); color: #fff; }
+        .btn-gmail { background: var(--gmail-red); color: #fff; }
         .btn-telegram { background: var(--telegram-blue); color: #fff; }
         .btn-x { background: #000; border: 1px solid #444; color: #fff; }
+        .btn-heylink { border: 2px solid var(--gold); color: var(--gold); margin-top: 5px; }
 
         .footer-info {
             margin-top: 40px;
@@ -140,9 +144,11 @@
         <div class="links-grid">
             <a href="https://kick.com/cocktailspins" class="btn btn-kick">Kick Live Stream</a>
             <a href="https://www.twitch.tv/cocktailspins" class="btn btn-twitch">Twitch Channel</a>
-            <a href="https://heylink.me/cocktailspins/" class="btn btn-heylink">Promo Web (HeyLink)</a>
+            <a href="https://www.instagram.com/cocktailspins/" class="btn btn-insta">Instagram</a>
+            <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">Business E-mail</a>
             <a href="https://t.me/cocktailspinowner" class="btn btn-telegram">Telegram Channel</a>
             <a href="https://x.com/Cocktailspins" class="btn btn-x">X (Twitter)</a>
+            <a href="https://heylink.me/cocktailspins/" class="btn btn-heylink" style="grid-column: 1 / -1;">All Promo Links (HeyLink)</a>
         </div>
 
         <div class="footer-info">
