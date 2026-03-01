@@ -3,133 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advertise | Cocktailspins Media Network</title>
+    <title>Partner Registration | Cocktailspins Network</title>
     <style>
-        :root { --gold: #d4af37; --kick-green: #53fc18; --bg-black: #0a0a0a; --glass: rgba(255, 255, 255, 0.03); }
-        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
-        .container { max-width: 1000px; margin: 0 auto; position: relative; padding-top: 60px; }
-        
-        /* TOP NAVIGATION BUTTON */
-        .home-btn {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 10px 18px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 0.85em;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-            z-index: 100;
-        }
-        .home-btn:hover { background: var(--gold); color: black; box-shadow: 0 0 15px var(--gold); }
-
-        /* HEADER */
-        .header { text-align: center; padding: 20px 0 40px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2); margin-bottom: 40px; }
-        .header h1 { color: var(--gold); font-size: 2.5em; text-transform: uppercase; letter-spacing: 4px; margin: 0; }
-        .header p { color: #888; text-transform: uppercase; font-size: 0.9em; letter-spacing: 2px; }
-
-        /* MEDIA KIT STATS */
-        .media-stats { background: var(--glass); border-radius: 30px; padding: 40px; margin-bottom: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.1); }
-        .media-stats div strong { display: block; font-size: 2.2em; color: var(--gold); }
-        .media-stats div span { font-size: 0.8em; color: #888; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* PRICING TABLE */
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        .tier-card { background: linear-gradient(145deg, #151515, #000); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 30px; padding: 40px; position: relative; transition: 0.4s; text-align: center; }
-        .tier-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 40px rgba(212, 175, 55, 0.1); }
-        .tier-card.popular { border: 2px solid var(--gold); }
-        .tier-card.popular::before { content: "MOST POPULAR"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gold); color: black; padding: 5px 15px; border-radius: 20px; font-size: 0.7em; font-weight: bold; }
-
-        .tier-name { color: var(--gold); font-size: 1.5em; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; }
-        .tier-price { font-size: 2em; font-weight: 900; margin-bottom: 20px; }
-        .tier-price span { font-size: 0.4em; color: #666; font-weight: normal; }
-
-        .features-list { list-style: none; padding: 0; margin-bottom: 30px; text-align: left; }
-        .features-list li { margin-bottom: 12px; font-size: 0.9em; display: flex; align-items: center; gap: 10px; color: #bbb; }
-        .features-list li::before { content: "✓"; color: var(--kick-green); font-weight: bold; }
-
-        /* CTA BUTTON */
-        .btn-contact { display: block; background: var(--gold); color: black; text-decoration: none; text-align: center; padding: 18px; border-radius: 12px; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
-        .btn-contact:hover { background: white; transform: scale(1.02); }
-
-        .footer-nav { text-align: center; margin-top: 30px; padding-bottom: 40px; }
-        .back-link { color: #555; text-decoration: none; font-size: 0.9em; transition: 0.3s; border-bottom: 1px solid transparent; }
-        .back-link:hover { color: var(--gold); border-color: var(--gold); }
+        :root { --gold: #d4af37; --bg-black: #0a0a0a; }
+        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', sans-serif; padding: 20px; display: flex; justify-content: center; }
+        .form-card { background: #151515; border: 1px solid var(--gold); border-radius: 30px; padding: 30px; max-width: 450px; width: 100%; }
+        h1 { color: var(--gold); text-align: center; }
+        label { display: block; font-size: 0.8em; color: var(--gold); margin: 15px 0 5px 0; text-transform: uppercase; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 12px; background: #000; border: 1px solid #333; border-radius: 10px; color: white; box-sizing: border-box; }
+        .btn-submit { background: var(--gold); color: black; width: 100%; padding: 15px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; text-transform: uppercase; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <a href="index.html" class="home-btn">← BACK</a>
+<div class="form-card">
+    <h1>PARTNER REGISTRATION</h1>
+    <p style="text-align: center; color: #888;">Submit your brand to our network.</p>
 
-    <div class="header">
-        <h1>B2B Advertising</h1>
-        <p>Premium Placements & Multi-Channel Promotions</p>
-    </div>
+    <form action="https://formspree.io/f/streamerstv27@gmail.com" method="POST">
+        <label>Casino Brand Name</label>
+        <input type="text" name="casino_name" required>
 
-    <div class="media-stats">
-        <div><strong>8.5M+</strong><span>Yearly Reach</span></div>
-        <div><strong>500+</strong><span>Monthly FTD Avg.</span></div>
-        <div><strong>700+</strong><span>Monthly Reg. Avg.</span></div>
-        <div><strong>Tier-1</strong><span>Audience Focus</span></div>
-    </div>
+        <label>Target Markets (e.g. HU, SK)</label>
+        <input type="text" name="markets" required>
 
-    <div class="pricing-grid">
-        <div class="tier-card">
-            <div class="tier-name">Standard Listing</div>
-            <div class="tier-price">RevShare<span>/ Hybrid</span></div>
-            <ul class="features-list">
-                <li>Review page inclusion</li>
-                <li>Affiliate link integration</li>
-                <li>Standard Support</li>
-                <li>Basic Geo-targeting</li>
-            </ul>
-            <a href="https://t.me/cocktailsp" class="btn-contact">Apply Now</a>
-        </div>
+        <label>Deal Type</label>
+        <select name="offer_type">
+            <option value="CPA">CPA</option>
+            <option value="RevShare">RevShare</option>
+            <option value="Hybrid">Hybrid</option>
+        </select>
 
-        <div class="tier-card popular">
-            <div class="tier-name">Premium Growth</div>
-            <div class="tier-price">€1,500<span>/ Month</span></div>
-            <ul class="features-list">
-                <li>Top 3 Position on Review Page</li>
-                <li>Weekly Telegram Pinned Post</li>
-                <li>Live Stream Shoutouts (4x / month)</li>
-                <li>Sidebar Banner Ad</li>
-                <li>Direct Account Manager</li>
-            </ul>
-            <a href="https://t.me/cocktailsp" class="btn-contact">Secure Slot</a>
-        </div>
+        <label>Telegram / Skype Contact</label>
+        <input type="text" name="contact" required>
 
-        <div class="tier-card">
-            <div class="tier-name">Market Leader</div>
-            <div class="tier-price">€3,500<span>/ Month</span></div>
-            <ul class="features-list">
-                <li>#1 Global Position (Top Pick)</li>
-                <li>Homepage Featured Slot</li>
-                <li>Daily Stream Integration</li>
-                <li>Exclusive Tournament Sponsoring</li>
-                <li>Monthly Traffic Reports</li>
-            </ul>
-            <a href="https://t.me/cocktailsp" class="btn-contact">Inquire Exclusivity</a>
-        </div>
-    </div>
+        <label>Message</label>
+        <textarea name="message" rows="3"></textarea>
 
-    <div style="text-align: center; background: rgba(83, 252, 24, 0.05); padding: 40px; border-radius: 30px; border: 1px dashed var(--kick-green); margin-bottom: 30px;">
-        <h3 style="color: var(--kick-green); margin-top: 0;">Custom Media Campaigns</h3>
-        <p style="color: #bbb;">Need a tailor-made solution for a new brand launch? We specialize in high-impact market entry strategies in Central Europe (HU, SK, CZ).</p>
-        <a href="mailto:streamerstv27@gmail.com" style="color: white; font-weight: bold; text-decoration: none;">Contact Strategy Team →</a>
-    </div>
-
-    <div class="footer-nav">
-        <a href="index.html" class="back-link">Return to Main Dashboard</a>
-    </div>
+        <button type="submit" class="btn-submit">Submit Application</button>
+    </form>
+    <div style="text-align: center; margin-top: 15px;"><a href="index.html" style="color: #444; text-decoration: none;">← Back</a></div>
 </div>
 
 </body>
