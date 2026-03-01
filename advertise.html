@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertise | Cocktailspins Media Network</title>
+    <style>
+        :root { --gold: #d4af37; --kick-green: #53fc18; --bg-black: #0a0a0a; --glass: rgba(255, 255, 255, 0.03); }
+        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        
+        /* HEADER */
+        .header { text-align: center; padding: 40px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2); margin-bottom: 40px; }
+        .header h1 { color: var(--gold); font-size: 2.5em; text-transform: uppercase; letter-spacing: 4px; margin: 0; }
+        .header p { color: #888; text-transform: uppercase; font-size: 0.9em; letter-spacing: 2px; }
+
+        /* PRICING TABLE */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
+        .tier-card { background: linear-gradient(145deg, #151515, #000); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 30px; padding: 40px; position: relative; transition: 0.4s; }
+        .tier-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 40px rgba(212, 175, 55, 0.1); }
+        .tier-card.popular { border: 2px solid var(--gold); }
+        .tier-card.popular::before { content: "MOST POPULAR"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gold); color: black; padding: 5px 15px; border-radius: 20px; font-size: 0.7em; font-weight: bold; }
+
+        .tier-name { color: var(--gold); font-size: 1.5em; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; }
+        .tier-price { font-size: 2em; font-weight: 900; margin-bottom: 20px; }
+        .tier-price span { font-size: 0.4em; color: #666; font-weight: normal; }
+
+        .features-list { list-style: none; padding: 0; margin-bottom: 30px; text-align: left; }
+        .features-list li { margin-bottom: 12px; font-size: 0.9em; display: flex; align-items: center; gap: 10px; color: #bbb; }
+        .features-list li::before { content: "✓"; color: var(--kick-green); font-weight: bold; }
+
+        /* MEDIA KIT STATS */
+        .media-stats { background: var(--glass); border-radius: 30px; padding: 40px; margin-bottom: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
+        .media-stats div strong { display: block; font-size: 2em; color: var(--gold); }
+        .media-stats div span { font-size: 0.8em; color: #888; text-transform: uppercase; }
+
+        /* CTA BUTTON */
+        .btn-contact { display: block; background: var(--gold); color: black; text-decoration: none; text-align: center; padding: 20px; border-radius: 15px; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
+        .btn-contact:hover { background: white; transform: scale(1.02); }
+
+        .back-btn { display: inline-block; margin-top: 30px; color: #555; text-decoration: none; font-size: 0.9em; transition: 0.3s; }
+        .back-btn:hover { color: var(--gold); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>B2B Advertising</h1>
+        <p>Premium Placements & Multi-Channel Promotions</p>
+    </div>
+
+    <div class="media-stats">
+        <div><strong>8.5M+</strong><span>Yearly Reach</span></div>
+        <div><strong>700+</strong><span>Daily FTD Avg.</span></div>
+        <div><strong>Tier-1</strong><span>Audience Focus</span></div>
+        <div><strong>100%</strong><span>Safe & Compliant</span></div>
+    </div>
+
+    <div class="pricing-grid">
+        <div class="tier-card">
+            <div class="tier-name">Standard Listing</div>
+            <div class="tier-price">RevShare<span>/ Hybrid</span></div>
+            <ul class="highlights-list features-list">
+                <li>Review page inclusion</li>
+                <li>Affiliate link integration</li>
+                <li>Standard Support</li>
+                <li>Basic Geo-targeting</li>
+            </ul>
+            <a href="https://t.me/cocktailsp" class="btn-contact">Apply Now</a>
+        </div>
+
+        <div class="tier-card popular">
+            <div class="tier-name">Premium Growth</div>
+            <div class="tier-price">€1,500<span>/ Month + RS</span></div>
+            <ul class="features-list">
+                <li>Top 3 Position on Review Page</li>
+                <li>Weekly Telegram Pinned Post</li>
+                <li>Live Stream Shoutouts (4x / month)</li>
+                <li>Sidebar Banner Ad</li>
+                <li>Direct Account Manager</li>
+            </ul>
+            <a href="https://t.me/cocktailsp" class="btn-contact">Secure Slot</a>
+        </div>
+
+        <div class="tier-card">
+            <div class="tier-name">Market Leader</div>
+            <div class="tier-price">€3,500<span>/ Month + RS</span></div>
+            <ul class="features-list">
+                <li>#1 Global Position (Top Pick)</li>
+                <li>Homepage Featured Slot</li>
+                <li>Daily Stream Integration</li>
+                <li>Exclusive Tournament Sponsoring</li>
+                <li>Monthly Traffic Reports</li>
+            </ul>
+            <a href="https://t.me/cocktailsp" class="btn-contact">Inquire Exclusivity</a>
+        </div>
+    </div>
+
+    <div style="text-align: center; background: rgba(83, 252, 24, 0.05); padding: 40px; border-radius: 30px; border: 1px dashed var(--kick-green);">
+        <h3 style="color: var(--kick-green);">Custom Media Campaigns</h3>
+        <p style="color: #bbb;">Need a tailor-made solution for a new brand launch? We specialize in high-impact market entry strategies in Central Europe (HU, SK, CZ).</p>
+        <a href="mailto:streamerstv27@gmail.com" style="color: white; font-weight: bold;">Contact Strategy Team →</a>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="back-btn">← Back to Main Dashboard</a>
+    </div>
+</div>
+
+</body>
+</html>
