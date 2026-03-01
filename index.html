@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocktailspins | Professional Casino Promoter</title>
+    <title>Cocktailspins | Professional Casino Promoter & SEO Network</title>
     <style>
         :root { --gold: #d4af37; --kick-green: #53fc18; --bg-black: #0a0a0a; --glass: rgba(255, 255, 255, 0.03); }
         body { background: var(--bg-black); color: white; font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; display: flex; justify-content: center; padding: 20px; overflow-x: hidden; line-height: 1.6; }
@@ -39,7 +39,7 @@
         .stat-card strong { color: var(--gold); font-size: 1.4em; display: block; }
         .stat-card span { color: #888; font-size: 0.7em; text-transform: uppercase; }
 
-        /* SEO & LIVE TRAFFIC INSIGHTS (NEW) */
+        /* LIVE SEO ANALYTICS (PREMIUM LIMITS) */
         .traffic-box { margin-top: 25px; background: rgba(0,0,0,0.4); border-radius: 20px; padding: 20px; border: 1px solid rgba(212,175,55,0.1); }
         .traffic-line { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; }
         .traffic-label { color: #888; }
@@ -115,7 +115,7 @@
         <div class="traffic-box">
             <div class="traffic-line">
                 <span class="traffic-label"><span class="dot"></span> Live Active Users</span>
-                <span class="traffic-val" id="live-users">142</span>
+                <span class="traffic-val" id="live-users">15482</span>
             </div>
             <div class="traffic-line">
                 <span class="traffic-label">Organic SEO Dominance</span>
@@ -149,13 +149,19 @@
     function updateLive() {
         const el = document.getElementById('live-users');
         let current = parseInt(el.innerText);
-        const change = Math.floor(Math.random() * 5) - 2; 
+        
+        // Náhodná zmena o 5 až 25 ľudí pre dynamický efekt pri veľkých číslach
+        const change = Math.floor(Math.random() * 41) - 20; 
         let next = current + change;
-        if (next < 135) next = 140;
-        if (next > 185) next = 175;
+        
+        // Limity nastavené na tvoje želanie: 13 435 až 18 837
+        if (next < 13435) next = 13500;
+        if (next > 18837) next = 18750;
+        
         el.innerText = next;
     }
-    setInterval(updateLive, 4000);
+    // Aktualizácia každé 3 sekundy
+    setInterval(updateLive, 3000);
 </script>
 
 </body>
