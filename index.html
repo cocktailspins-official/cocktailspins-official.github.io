@@ -4,57 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktailspins | Premier Casino Media & Affiliate Network</title>
-    <meta name="description" content="Cocktailspins is a high-authority casino promotion ecosystem. 700+ Daily Avg. Viewers, 500+ Monthly FTDs. Leading the EU gambling market.">
-    <meta name="keywords" content="casino affiliate, casino promo, gambling traffic, kick casino streamer, best casino bonuses 2026">
-    
     <style>
-        :root { --gold: #d4af37; --kick-green: #53fc18; --bg-black: #0a0a0a; --glass: rgba(255, 255, 255, 0.03); --premium-gradient: linear-gradient(145deg, #1a1a1a, #000); }
+        :root { --gold: #d4af37; --kick-green: #53fc18; --bg-black: #0a0a0a; --glass: rgba(255, 255, 255, 0.03); }
         body { background: var(--bg-black); color: white; font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; display: flex; justify-content: center; padding: 20px; overflow-x: hidden; line-height: 1.6; }
         
         .main-card { background: linear-gradient(145deg, #151515, #000); border: 1px solid var(--gold); border-radius: 40px; max-width: 900px; width: 100%; padding: 40px; text-align: center; box-shadow: 0 0 60px rgba(212, 175, 55, 0.2); }
         
-        .logo-main { width: 130px; height: 130px; border-radius: 50%; border: 3px solid var(--gold); margin-bottom: 20px; box-shadow: 0 0 25px var(--gold); }
-        h1 { font-size: 3.2em; margin: 10px 0; color: var(--gold); text-transform: uppercase; letter-spacing: 5px; font-weight: 900; }
+        .logo-main { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--gold); margin-bottom: 20px; box-shadow: 0 0 25px var(--gold); }
+        h1 { font-size: 3em; margin: 10px 0; color: var(--gold); text-transform: uppercase; letter-spacing: 5px; font-weight: 900; }
         
         /* TICKER */
-        .ticker { width: 100%; overflow: hidden; background: rgba(212, 175, 55, 0.05); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); margin: 30px 0; padding: 15px 0; }
+        .ticker { width: 100%; overflow: hidden; background: rgba(212, 175, 55, 0.05); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); margin: 25px 0; padding: 15px 0; }
         .ticker-track { display: flex; width: calc(180px * 14); animation: scroll 25s linear infinite; }
-        .ticker-item { width: 160px; height: 70px; margin: 0 10px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; background: #000; }
-        .ticker-item img { max-width: 85%; max-height: 75%; object-fit: contain; }
+        .ticker-item { width: 160px; height: 70px; margin: 0 10px; display: flex; align-items: center; justify-content: center; }
+        .ticker-item img { max-width: 85%; max-height: 75%; object-fit: contain; filter: grayscale(0.5); transition: 0.3s; }
+        .ticker-item img:hover { filter: grayscale(0); }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-180px * 7)); } }
 
-        /* B2B PERFORMANCE DASHBOARD */
-        .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 30px; padding: 35px; margin: 30px 0; text-align: left; position: relative; }
-        .business-container::after { content: "VERIFIED DATA"; position: absolute; top: 15px; right: 20px; font-size: 0.6em; color: var(--kick-green); border: 1px solid var(--kick-green); padding: 2px 8px; border-radius: 5px; }
+        /* --- PREMIUM FEATURED BRANDS (TO ČO CHÝBALO) --- */
+        .premium-section { margin: 30px 0; text-align: left; }
+        .section-label { color: var(--gold); font-size: 0.7em; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; display: block; text-align: center; }
         
-        .biz-title { color: var(--gold); font-size: 1.5em; font-weight: bold; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
+        .premium-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .premium-card { background: linear-gradient(145deg, #1a1a1a, #0a0a0a); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 20px; padding: 20px; display: flex; align-items: center; gap: 15px; transition: 0.4s; text-decoration: none; color: white; position: relative; overflow: hidden; }
+        .premium-card:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15); }
+        .premium-card::before { content: "PREMIUM PARTNER"; position: absolute; top: 0; right: 0; background: var(--gold); color: black; font-size: 0.5em; font-weight: bold; padding: 2px 10px; border-bottom-left-radius: 10px; }
         
-        .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
-        .stat-card { background: var(--premium-gradient); padding: 20px; border-radius: 20px; border: 1px solid rgba(212,175,55,0.15); text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        .stat-card strong { color: var(--gold); font-size: 1.8em; display: block; margin-bottom: 5px; }
-        .stat-card span { color: #888; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; }
+        .premium-logo { width: 60px; height: 60px; background: #000; border-radius: 12px; padding: 5px; border: 1px solid rgba(255,255,255,0.1); object-fit: contain; }
+        .premium-info h3 { margin: 0; font-size: 1.1em; color: #fff; }
+        .premium-info p { margin: 0; font-size: 0.75em; color: var(--kick-green); font-weight: bold; }
 
-        /* TRAFFIC INSIGHTS (The "Why Invest" section) */
-        .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .insight-item { background: rgba(255,255,255,0.02); padding: 15px; border-radius: 15px; border-left: 3px solid var(--kick-green); }
-        .insight-item h4 { margin: 0 0 5px 0; color: #fff; font-size: 1em; }
-        .insight-item p { margin: 0; color: #777; font-size: 0.85em; }
+        /* B2B DASHBOARD */
+        .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 30px; padding: 30px; margin: 30px 0; text-align: left; border-left: 4px solid var(--gold); }
+        .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 25px; }
+        .stat-card { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 15px; border: 1px solid rgba(212,175,55,0.1); text-align: center; }
+        .stat-card strong { color: var(--gold); font-size: 1.5em; display: block; }
+        .stat-card span { color: #888; font-size: 0.7em; text-transform: uppercase; }
 
-        /* LINKS GRID */
-        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 40px; }
-        .btn { padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; transition: 0.4s; color: white; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; }
-        .btn small { font-size: 0.7em; opacity: 0.7; margin-top: 3px; font-weight: normal; }
-        .btn:hover { transform: translateY(-5px); filter: brightness(1.2); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        /* LINKS */
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+        .btn { padding: 16px; border-radius: 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8em; transition: 0.3s; color: white; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; }
+        .btn:hover { transform: translateY(-3px); filter: brightness(1.2); }
         
-        .btn-reviews { background: var(--gold); color: black; grid-column: 1 / -1; font-size: 1.2em; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); margin-bottom: 10px; flex-direction: row; gap: 10px; }
+        .btn-reviews { background: var(--gold); color: black; grid-column: 1 / -1; font-size: 1.1em; flex-direction: row; gap: 10px; margin-bottom: 10px; }
+        .btn-advertise { background: #fff; color: black; grid-column: 1 / -1; margin-bottom: 10px; }
         .btn-kick { background: var(--kick-green); color: black; }
-        .btn-twitch { background: #9146FF; }
-        .btn-tg-personal { background: #229ED9; border: 1px solid rgba(255,255,255,0.2); }
-        .btn-tg-group { background: #0088cc; }
+        .btn-tg-personal { background: #229ED9; }
         .btn-gmail { background: #ea4335; }
-        .btn-insta { background: linear-gradient(45deg, #f09433, #e31682, #8a3ab9); }
 
-        .footer { margin-top: 50px; font-size: 0.8em; color: #444; letter-spacing: 2px; }
+        .footer { margin-top: 50px; font-size: 0.7em; color: #444; text-transform: uppercase; letter-spacing: 2px; }
     </style>
 </head>
 <body>
@@ -62,7 +60,7 @@
 <div class="main-card">
     <img src="1000017793.jpg" alt="Cocktailspins" class="logo-main">
     <h1>COCKTAILSPINS</h1>
-    <p style="color: var(--gold); font-weight: bold; letter-spacing: 3px; font-size: 0.9em; margin-bottom: 0;">GLOBAL CASINO ADVERTISING NETWORK</p>
+    <p style="color: var(--gold); font-weight: bold; letter-spacing: 3px; font-size: 0.8em;">GLOBAL CASINO MEDIA NETWORK</p>
 
     <div class="ticker">
         <div class="ticker-track">
@@ -83,54 +81,46 @@
         </div>
     </div>
 
+    <div class="premium-section">
+        <span class="section-label">Premium Featured Brands</span>
+        <div class="premium-grid">
+            <a href="https://lnk.ua/be8BwDyN5" class="premium-card">
+                <img src="images (16).jpeg" class="premium-logo" alt="NV">
+                <div class="premium-info">
+                    <h3>NV CASINO</h3>
+                    <p>EXCLUSIVE 100% BONUS</p>
+                </div>
+            </a>
+            <a href="https://tinyurl.com/infiaff?bid=219&lid=209&aid=SRSrWLqM3&cid=6991" class="premium-card">
+                <img src="boatbet-logo.png" class="premium-logo" alt="Boatbet">
+                <div class="premium-info">
+                    <h3>BOATBET</h3>
+                    <p>TOP VIP REWARDS</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
     <div class="business-container">
-        <div class="biz-title">📈 Partnership Performance Report</div>
-        
         <div class="stats-dashboard">
             <div class="stat-card"><strong>700+</strong><span>Monthly Regs</span></div>
             <div class="stat-card"><strong>500+</strong><span>Monthly FTDs</span></div>
             <div class="stat-card"><strong>700+</strong><span>Avg. Live Viewers</span></div>
-            <div class="stat-card"><strong>High</strong><span>Player LTV</span></div>
         </div>
-
-        <div class="insights-grid">
-            <div class="insight-item">
-                <h4>Dominant GEOs</h4>
-                <p>HU, SK, CZ, DE & Tier-1 Global Traffic.</p>
-            </div>
-            <div class="insight-item">
-                <h4>Traffic Quality</h4>
-                <p>100% Organic Gambling-focused audience.</p>
-            </div>
-            <div class="insight-item">
-                <h4>Retention Model</h4>
-                <p>Proven high re-deposit rates & loyalty.</p>
-            </div>
-            <div class="insight-item">
-                <h4>Compliance</h4>
-                <p>Fully compliant with Global & Local regulations.</p>
-            </div>
-        </div>
+        <p style="font-size: 0.85em; color: #888; margin: 0;">Main GEOs: <b>HU, SK, CZ, DE</b> | Traffic Quality: <b>High LTV Organic</b></p>
     </div>
-
-    <a href="reviews.html" class="btn btn-reviews">💎 ACCESS PREMIUM CASINO REVIEWS & OFFERS 💎</a>
 
     <div class="links-grid">
-        <a href="https://t.me/cocktailsp" target="_blank" class="btn btn-tg-personal" style="background: #d4af37; color: black; border: none;">
-            <b>BUSINESS INQUIRY</b>
-            <small>Direct B2B Telegram</small>
-        </a>
-        <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">
-            <b>EMAIL ADVERTISING</b>
-            <small>Request Media Kit</small>
-        </a>
-        <a href="https://kick.com/cocktailspins" target="_blank" class="btn btn-kick">Kick.com<small>Live Broadcast</small></a>
-        <a href="https://www.twitch.tv/cocktailspins" target="_blank" class="btn btn-twitch">Twitch.tv<small>Live Broadcast</small></a>
-        <a href="https://t.me/cocktailspinowner" target="_blank" class="btn btn-tg-group">Telegram Group<small>Community Channel</small></a>
-        <a href="https://www.instagram.com/cocktailspins/" target="_blank" class="btn btn-insta">Instagram<small>Brand Updates</small></a>
+        <a href="reviews.html" class="btn btn-reviews">💎 ACCESS ALL CASINO REVIEWS 💎</a>
+        <a href="advertise.html" class="btn btn-advertise">🚀 WORK WITH ME (ADVERTISE)</a>
+        
+        <a href="https://t.me/cocktailsp" target="_blank" class="btn btn-tg-personal">Business Telegram<small>@cocktailsp</small></a>
+        <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">Business Email<small>Inquiries</small></a>
+        <a href="https://kick.com/cocktailspins" target="_blank" class="btn btn-kick">Kick.com<small>Live Stream</small></a>
+        <a href="https://t.me/cocktailspinowner" target="_blank" class="btn btn-tg-group">Telegram Group<small>Community</small></a>
     </div>
 
-    <div class="footer">COCKTAILSPINS | THE HIGHEST CONVERTING CASINO NETWORK | 2026</div>
+    <div class="footer">Cocktailspins Media | The Highest Converting Network | 2026</div>
 </div>
 
 </body>
