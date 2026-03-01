@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advertise | Cocktailspins Media Network Hungary</title>
-    <meta name="description" content="Partner with Cocktailspins Media Network. Fixed fee advertising slots for premium casino brands in the HU/SK/CZ markets.">
+    <meta name="description" content="Partner with Cocktailspins Media Network. High-ticket advertising slots for premium casino brands.">
     <link rel="icon" type="image/jpg" href="1000017793.jpg">
 
     <style>
@@ -18,7 +18,7 @@
         body { 
             background: var(--bg-black); 
             color: white; 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
             margin: 0; 
             display: flex; 
             justify-content: center; 
@@ -34,7 +34,7 @@
             padding: 40px; 
             max-width: 500px; 
             width: 100%; 
-            box-shadow: 0 0 40px rgba(212, 175, 55, 0.15); 
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.2); 
             text-align: center;
         }
 
@@ -58,12 +58,9 @@
             color: #888; 
             font-size: 0.9em; 
             margin-bottom: 30px; 
-            line-height: 1.4;
         }
 
-        form {
-            text-align: left;
-        }
+        form { text-align: left; }
 
         label { 
             display: block; 
@@ -72,7 +69,6 @@
             margin-bottom: 8px; 
             text-transform: uppercase; 
             font-weight: bold;
-            letter-spacing: 1px;
         }
 
         input, select, textarea { 
@@ -85,13 +81,6 @@
             font-size: 0.95em;
             margin-bottom: 20px;
             box-sizing: border-box;
-            transition: 0.3s;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            border-color: var(--gold);
-            outline: none;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
         }
 
         .btn-submit { 
@@ -104,16 +93,12 @@
             font-weight: 900; 
             cursor: pointer; 
             text-transform: uppercase; 
-            font-size: 1em;
             transition: 0.4s;
-            margin-top: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .btn-submit:hover { 
             transform: translateY(-3px); 
             filter: brightness(1.1);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
         }
 
         .back-link {
@@ -122,17 +107,6 @@
             color: #555;
             text-decoration: none;
             font-size: 0.8em;
-            transition: 0.3s;
-        }
-
-        .back-link:hover {
-            color: var(--gold);
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            .form-card { padding: 25px; }
-            h1 { font-size: 1.5em; }
         }
     </style>
 </head>
@@ -141,7 +115,7 @@
 <div class="form-card">
     <img src="1000017793.jpg" alt="Cocktailspins Logo" class="logo-small">
     <h1>Partner Registration</h1>
-    <p>Secure your advertising slot on the most advanced Casino SEO Network in Hungary.</p>
+    <p>Submit your brand for premium exposure on the Cocktailspins Network.</p>
 
     <form action="https://formspree.io/f/streamerstv27@gmail.com" method="POST">
         
@@ -151,10 +125,10 @@
         <label>Advertising Package (Fixed Fee)</label>
         <select name="package_type" required>
             <option value="" disabled selected>Select a package...</option>
-            <option value="Standard_Listing">Standard Listing (€400/mo)</option>
-            <option value="Premium_Slider">Premium Slider (€1,000/mo)</option>
-            <option value="Top3_Spotlight">Top 3 Spotlight (€2,500/mo)</option>
-            <option value="Full_Takeover">Full Network Takeover (Custom)</option>
+            <option value="Standard_Weekly">Standard Listing (€1,200 / Weekly)</option>
+            <option value="Premium_Slider">Premium Slider (€3,500 / Monthly)</option>
+            <option value="Top1_Spotlight">Top 1 Spotlight (€5,000 / Monthly)</option>
+            <option value="Full_Takeover">Full Network Takeover (Custom Deal)</option>
         </select>
 
         <label>Your Contact (Telegram / Skype)</label>
@@ -163,16 +137,17 @@
         <label>Target Markets</label>
         <input type="text" name="geo_targets" placeholder="e.g. HU, SK, CZ" required>
 
-        <label>Message / Special Requirements</label>
-        <textarea name="message" rows="3" placeholder="Tell us more about your brand..."></textarea>
+        <label>Additional Notes</label>
+        <textarea name="message" rows="3" placeholder="Additional requirements..."></textarea>
 
-        <input type="hidden" name="_subject" value="New Partnership Application - Fixed Fee">
+        <input type="hidden" name="_subject" value="New Partnership Application - High Ticket">
 
         <button type="submit" class="btn-submit">Submit Application</button>
     </form>
     
-    <a href="index.html" class="back-link">← Back to Networking Portal</a>
+    <a href="index.html" class="back-link">← Back to Portal</a>
 </div>
 
 </body>
 </html>
+
