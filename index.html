@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktailspins | Professional Casino Promoter & SEO Network</title>
-    <meta name="description" content="Official Cocktailspins Media Network. Professional casino promoter and SEO traffic specialist based in Hungary, serving HU, SK, CZ, and DE markets. 500+ Monthly FTDs.">
-    <meta name="keywords" content="cocktailspins, casino promoter, casino bonus, online casino reviews, gambling traffic Hungary, SEO expert, iGaming affiliate">
+    <meta name="description" content="Official Cocktailspins Media Network. Professional casino promoter and SEO traffic specialist based in Hungary. 500+ Monthly FTDs.">
+    <meta name="keywords" content="cocktailspins, casino promoter, casino bonus, online casino reviews, gambling traffic Hungary, SEO expert">
     <link rel="canonical" href="https://cocktailspins-official.github.io/">
     
     <meta name="geo.region" content="HU" />
@@ -32,7 +32,6 @@
         "addressLocality": "Budapest",
         "addressCountry": "HU"
       },
-      "description": "Premium casino advertising network and SEO specialist for Central European markets.",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -69,7 +68,7 @@
         .premium-info h3 { margin: 0; font-size: 1.1em; }
         .premium-info p { margin: 0; font-size: 0.75em; color: var(--kick-green); font-weight: bold; }
 
-        /* BUSINESS DASHBOARD (Your Original Stats) */
+        /* DASHBOARD (Original Stats) */
         .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 25px; padding: 30px; margin: 30px 0; text-align: left; border-left: 4px solid var(--gold); }
         .biz-title { color: var(--gold); font-size: 1.3em; font-weight: bold; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
         .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
@@ -77,7 +76,7 @@
         .stat-card strong { color: var(--gold); font-size: 1.4em; display: block; }
         .stat-card span { color: #888; font-size: 0.7em; text-transform: uppercase; }
 
-        /* LIVE ANALYTICS (13,435 - 18,837 Limits) */
+        /* TRAFFIC BOX (WITH GROWTH RESTORED) */
         .traffic-box { margin-top: 25px; background: rgba(0,0,0,0.4); border-radius: 20px; padding: 20px; border: 1px solid rgba(212,175,55,0.1); }
         .traffic-line { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.9em; }
         .traffic-label { color: #888; }
@@ -99,13 +98,13 @@
         .btn-insta { background: linear-gradient(45deg, #f09433, #e31682, #8a3ab9); }
         .btn-gmail { background: #ea4335; }
 
-        /* APP INSTALL BANNER */
-        #install-banner { position: fixed; bottom: 20px; left: 20px; right: 20px; background: linear-gradient(145deg, #1a1a1a, #000); border: 1px solid var(--gold); border-radius: 20px; padding: 15px; display: none; align-items: center; justify-content: space-between; z-index: 10000; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); }
+        /* APP INSTALL BANNER - NOW ALWAYS FLEX */
+        #install-banner { position: fixed; bottom: 20px; left: 20px; right: 20px; background: linear-gradient(145deg, #1a1a1a, #000); border: 1px solid var(--gold); border-radius: 20px; padding: 15px; display: flex; align-items: center; justify-content: space-between; z-index: 10000; box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); }
         .banner-text { font-size: 0.85em; font-weight: bold; color: white; text-align: left; }
         .banner-text span { color: var(--gold); display: block; font-size: 0.7em; }
         #install-button { background: var(--gold); color: black; border: none; padding: 10px 15px; border-radius: 10px; font-weight: bold; font-size: 0.8em; cursor: pointer; text-transform: uppercase; }
 
-        /* MOBILE RESPONSIVE FIXES */
+        /* MOBILE FIXES */
         @media (max-width: 600px) {
             body { padding: 10px; }
             .main-card { padding: 25px 15px; border-radius: 25px; }
@@ -131,7 +130,7 @@
 </div>
 
 <div class="main-card">
-    <img src="1000017793.jpg" alt="Cocktailspins Official Media Network" class="logo-main">
+    <img src="1000017793.jpg" alt="Cocktailspins Official Network" class="logo-main">
     <h1>COCKTAILSPINS</h1>
     <p style="color: var(--gold); font-weight: bold; letter-spacing: 2px; font-size: 0.8em;">PREMIUM CASINO PROMOTER & SEO NETWORK | HUNGARY</p>
 
@@ -185,6 +184,10 @@
                 <span class="traffic-label">Organic SEO Dominance</span>
                 <span class="traffic-val" style="color:#fff">82.4%</span>
             </div>
+            <div class="traffic-line">
+                <span class="traffic-label">Avg. Monthly Growth</span>
+                <span class="traffic-val" style="color: var(--kick-green)">+18.5%</span>
+            </div>
         </div>
     </div>
 
@@ -203,7 +206,7 @@
 </div>
 
 <script>
-    // 1. LIVE COUNTER SCRIPT (13,435 - 18,837)
+    // 1. LIVE COUNTER (13,435 - 18,837)
     function updateLive() {
         const el = document.getElementById('live-users');
         if(!el) return;
@@ -220,7 +223,7 @@
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('/sw.js')
-                .then(reg => console.log('Cocktailspins App Ready'));
+                .then(reg => console.log('App Registered'));
         });
     }
 
@@ -232,16 +235,21 @@
     window.addEventListener('beforeinstallprompt', (e) => {
         e.preventDefault();
         deferredPrompt = e;
-        installBanner.style.display = 'flex';
+        // The banner is already 'flex' via CSS, but this handles the logic
     });
 
     installButton.addEventListener('click', () => {
         if (deferredPrompt) {
             deferredPrompt.prompt();
             deferredPrompt.userChoice.then((choiceResult) => {
-                installBanner.style.display = 'none';
+                if (choiceResult.outcome === 'accepted') {
+                    installBanner.style.display = 'none';
+                }
                 deferredPrompt = null;
             });
+        } else {
+            // Fallback for browsers that don't support the prompt
+            alert("To install, use your browser's 'Add to Home Screen' option.");
         }
     });
 </script>
