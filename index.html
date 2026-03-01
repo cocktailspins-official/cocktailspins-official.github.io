@@ -10,6 +10,22 @@
     <link rel="apple-touch-icon" href="1000017793.jpg">
     <link rel="manifest" href="manifest.json">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cocktailspins Network",
+      "url": "https://cocktailspins-official.github.io/",
+      "logo": "https://cocktailspins-official.github.io/1000017793.jpg",
+      "description": "Premium Casino SEO Network and Brand Promoter in Hungary.",
+      "sameAs": [
+        "https://instagram.com/cocktailspins",
+        "https://kick.com/cocktailspins",
+        "https://www.twitch.tv/cocktailspins"
+      ]
+    }
+    </script>
+
     <style>
         :root { --gold: #d4af37; --kick-green: #53fc18; --bg-black: #0a0a0a; --glass: rgba(255, 255, 255, 0.03); }
         body { background: var(--bg-black); color: white; font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; display: flex; justify-content: center; padding: 20px; overflow-x: hidden; line-height: 1.6; }
@@ -130,7 +146,7 @@
         <div class="traffic-box">
             <div class="traffic-line">
                 <span><span class="dot"></span> Live Active Users</span>
-                <span class="traffic-val" id="live-users">15482</span>
+                <span class="traffic-val" id="live-users">15449</span>
             </div>
             <div class="traffic-line"><span>Organic SEO Dominance</span><span class="traffic-val" style="color:#fff">82.4%</span></div>
             <div class="traffic-line"><span>Avg. Monthly Growth</span><span class="traffic-val" style="color: var(--kick-green)">+18.5%</span></div>
@@ -155,7 +171,6 @@
 </div>
 
 <script>
-    // Live Users logic
     function updateLive() {
         const el = document.getElementById('live-users');
         if(!el) return;
@@ -168,7 +183,6 @@
     }
     setInterval(updateLive, 3000);
 
-    // VIP Members Counter logic
     function updateMembers() {
         const memberEl = document.getElementById('member-count');
         if(!memberEl) return;
@@ -182,7 +196,6 @@
     }
     setInterval(updateMembers, 10000);
 
-    // PWA logic
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js'); });
     }
