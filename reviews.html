@@ -3,186 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casino Reviews | Cocktailspins Ecosystem</title>
+    <title>Casino Reviews | Cocktailspins</title>
     <style>
-        :root { --gold: #d4af37; --kick-green: #53fc18; --bg-black: #0a0a0a; }
-        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; text-align: center; }
-        .container { max-width: 850px; margin: 0 auto; position: relative; padding-top: 60px; }
-        
-        .home-btn {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 10px 18px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 0.85em;
-            font-weight: bold;
-            display: flex;
-            align-items: center; gap: 8px; transition: 0.3s;
-        }
-        .home-btn:hover { background: var(--gold); color: black; box-shadow: 0 0 15px var(--gold); }
-
-        h1 { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-size: 2.2em; }
-        .subtitle { color: #888; margin-bottom: 40px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; }
-
-        .review-card {
-            background: linear-gradient(145deg, #1a1a1a, #000);
-            border: 1px solid var(--gold);
-            border-radius: 25px;
-            padding: 25px;
-            margin-bottom: 30px;
-            text-align: left;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: 0.3s;
-        }
-        .review-card:hover { transform: translateY(-5px); border-color: #fff; }
-
-        .casino-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 15px; }
-        .casino-logo { max-width: 150px; max-height: 55px; object-fit: contain; background: #000; padding: 8px; border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.2); }
-        .rating { color: var(--gold); font-weight: bold; font-size: 1.1em; background: rgba(212, 175, 55, 0.1); padding: 5px 15px; border-radius: 20px; }
-
-        .highlights { margin: 15px 0; padding: 0; list-style: none; }
-        .highlights li { margin-bottom: 10px; padding-left: 30px; position: relative; color: #ccc; font-size: 0.95em; }
-        .highlights li::before { content: "★"; position: absolute; left: 0; color: var(--gold); }
-
-        .promo-box { 
-            background: rgba(83, 252, 24, 0.05); 
-            border: 1px dashed var(--kick-green); 
-            padding: 15px; 
-            border-radius: 15px; 
-            color: var(--kick-green); 
-            font-weight: bold; 
-            text-align: center; 
-            margin: 20px 0;
-            font-size: 1.1em;
-            text-transform: uppercase;
-        }
-
-        .btn-play {
-            background: var(--gold);
-            color: black;
-            text-decoration: none;
-            padding: 18px;
-            border-radius: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            display: block;
-            text-align: center;
-            transition: 0.3s;
-            letter-spacing: 1px;
-        }
-        .btn-play:hover { background: #fff; box-shadow: 0 0 25px var(--gold); }
-
-        .bottom-nav { margin-top: 50px; padding-bottom: 40px; }
-        .back-link { color: #666; text-decoration: none; border-bottom: 1px solid #333; padding-bottom: 5px; transition: 0.3s; }
-        .back-link:hover { color: var(--gold); border-color: var(--gold); }
+        :root { --gold: #d4af37; --bg-black: #0a0a0a; }
+        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', sans-serif; padding: 20px; text-align: center; }
+        .card { background: #151515; border: 1px solid var(--gold); border-radius: 20px; padding: 20px; margin: 15px auto; max-width: 500px; text-align: left; }
+        h3 { color: var(--gold); margin-top: 0; }
+        .btn { background: var(--gold); color: black; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
+        .score { color: #53fc18; float: right; }
     </style>
 </head>
 <body>
+    <img src="1000017793.jpg" width="80" style="border-radius: 50%; border: 2px solid var(--gold);">
+    <h1>TOP CASINO REVIEWS</h1>
 
-    <div class="container">
-        <a href="index.html" class="home-btn">← HOME</a>
-
-        <h1>Casino Reviews</h1>
-        <p class="subtitle">Trusted & Verified Partner Brands</p>
-
-        <div class="review-card" style="border-width: 3px; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);">
-            <div class="casino-header">
-                <img src="images (16).jpeg" class="casino-logo" alt="NV Casino">
-                <div class="rating">Rating: 10/10 ★ TOP PICK</div>
-            </div>
-            <h3>NV Casino</h3>
-            <ul class="highlights">
-                <li>Cutting-edge platform with massive game variety</li>
-                <li>Exclusive rewards for high-volume players</li>
-                <li>Instant deposits and guaranteed fast payouts</li>
-            </ul>
-            <div class="promo-box">USE PROMO CODE: TAMÁS</div>
-            <a href="https://lnk.ua/be8BwDyN5" target="_blank" class="btn-play">Claim Bonus & Play Now</a>
-        </div>
-
-        <div class="review-card">
-            <div class="casino-header">
-                <img src="boatbet-logo.png" class="casino-logo" alt="Boatbet">
-                <div class="rating">Rating: 9.8/10</div>
-            </div>
-            <h3>Boatbet</h3>
-            <ul class="highlights">
-                <li>Deep selection of live casino games</li>
-                <li>High-tier VIP loyalty program</li>
-                <li>Excellent reputation for fairness and speed</li>
-            </ul>
-            <div class="promo-box">PROMO CODE: (AUTO-APPLIED)</div>
-            <a href="https://tinyurl.com/infiaff?bid=219&lid=209&aid=SRSrWLqM3&cid=6991" target="_blank" class="btn-play">Claim Bonus & Play Now</a>
-        </div>
-
-        <div class="review-card">
-            <div class="casino-header">
-                <img src="royalsea.png" class="casino-logo" alt="RoyalSea">
-                <div class="rating">Rating: 9.6/10</div>
-            </div>
-            <h3>RoyalSea Casino</h3>
-            <ul class="highlights">
-                <li>Luxury environment for high-rollers</li>
-                <li>Bespoke VIP bonuses and personal managers</li>
-                <li>High-limit tables and premium support</li>
-            </ul>
-            <div class="promo-box">REWARD: EXCLUSIVE VIP ACCESS</div>
-            <a href="TU_VLOZ_ROYALSEA_LINK_SEM" target="_blank" class="btn-play">Claim Bonus & Play Now</a>
-        </div>
-
-        <div class="review-card">
-            <div class="casino-header">
-                <img src="cropped-cropped-vavada-logo.png" class="casino-logo" alt="Vavada">
-                <div class="rating">Rating: 9.9/10</div>
-            </div>
-            <h3>Vavada Casino</h3>
-            <ul class="highlights">
-                <li>Instant withdrawals (under 15 minutes)</li>
-                <li>No-KYC required for quick access</li>
-                <li>Weekly tournaments with real cash prizes</li>
-            </ul>
-            <div class="promo-box">BONUS: 100 FREE SPINS + 100% MATCH</div>
-            <a href="#" target="_blank" class="btn-play">Claim Bonus & Play Now</a>
-        </div>
-
-        <div class="review-card">
-            <div class="casino-header">
-                <img src="500-Casino.png" class="casino-logo" alt="500 Casino">
-                <div class="rating">Rating: 9.8/10</div>
-            </div>
-            <h3>500 Casino</h3>
-            <ul class="highlights">
-                <li>Premium Rakeback and VIP rewards system</li>
-                <li>Full support for Crypto and FIAT payments</li>
-            </ul>
-            <div class="promo-box">PROMO CODE: COCKTAILSPINS</div>
-            <a href="#" target="_blank" class="btn-play">Claim Bonus & Play Now</a>
-        </div>
-
-        <div class="review-card">
-            <div class="casino-header">
-                <img src="betalice-casino.png" class="casino-logo" alt="BetAlice">
-                <div class="rating">Rating: 9.7/10</div>
-            </div>
-            <h3>BetAlice Casino</h3>
-            <ul class="highlights">
-                <li>Modern user interface and seamless mobile play</li>
-                <li>Exclusive slot titles and live dealer games</li>
-            </ul>
-            <div class="promo-box">SPECIAL: EXCLUSIVE WELCOME REWARD</div>
-            <a href="#" target="_blank" class="btn-play">Claim Bonus & Play Now</a>
-        </div>
-
-        <div class="bottom-nav">
-            <a href="index.html" class="back-link">Return to Business Profile</a>
-        </div>
+    <div class="card">
+        <h3>VAVADA CASINO <span class="score">9.8/10</span></h3>
+        <p><strong>Bonus:</strong> 100% up to $1,000 + 100 Free Spins</p>
+        <p>Top-tier casino for high rollers. No KYC and instant withdrawals.</p>
+        <a href="YOUR_AFFILIATE_LINK" class="btn">CLAIM BONUS</a>
     </div>
 
+    <div class="card">
+        <h3>BOATBET <span class="score">9.5/10</span></h3>
+        <p><strong>Bonus:</strong> VIP Welcome Pack + Daily Cashback</p>
+        <p>Modern crypto-friendly interface with exclusive loyalty rewards.</p>
+        <a href="https://tinyurl.com/infiaff" class="btn">GET VIP ACCESS</a>
+    </div>
+
+    <div class="card">
+        <h3>NV CASINO <span class="score">9.4/10</span></h3>
+        <p><strong>Bonus:</strong> 100% Exclusive Deposit Match</p>
+        <p>High limits and transparent gaming for professional players.</p>
+        <a href="https://lnk.ua/be8BwDyN5" class="btn">START WINNING</a>
+    </div>
+
+    <br><a href="index.html" style="color: grey; text-decoration: none;">← Back to Home</a>
 </body>
 </html>
 
