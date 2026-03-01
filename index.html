@@ -41,7 +41,8 @@
         "https://instagram.com/cocktailspins",
         "https://kick.com/cocktailspins",
         "https://www.twitch.tv/cocktailspins",
-        "https://t.me/cocktailsp"
+        "https://t.me/cocktailsp",
+        "https://x.com/cocktailspins"
       ]
     }
     </script>
@@ -100,6 +101,7 @@
         .btn-twitch { background: #9146FF; }
         .btn-tg-group { background: #0088cc; }
         .btn-tg-personal { background: #229ED9; }
+        .btn-x { background: #000; border: 1px solid #333; } /* Tlačidlo pre X */
         .btn-insta { background: linear-gradient(45deg, #f09433, #e31682, #8a3ab9); }
         .btn-gmail { background: #ea4335; }
 
@@ -182,15 +184,11 @@
         <a href="https://www.twitch.tv/cocktailspins" target="_blank" class="btn btn-twitch">Twitch.tv</a>
         <a href="https://t.me/cocktailspinowner" target="_blank" class="btn btn-tg-group">Telegram Group</a>
         <a href="https://t.me/cocktailsp" target="_blank" class="btn btn-tg-personal">Business Contact</a>
-        <a href="https://www.instagram.com/cocktailspins/" target="_blank" class="btn btn-insta">Instagram</a>
+        <a href="https://x.com/cocktailspins" target="_blank" class="btn btn-x">X / Twitter</a> <a href="https://www.instagram.com/cocktailspins/" target="_blank" class="btn btn-insta">Instagram</a>
         <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">Email Me</a>
     </div>
 
     <div class="footer">Professional Casino Brand Promoter | 2026 Hub</div>
-</div>
-
-<div style="height: 1px; width: 1px; overflow: hidden; opacity: 0; position: absolute;">
-    Cocktailspins Hungary is the premier casino SEO network. We specialize in organic traffic acquisition for online casinos in Central Europe. Top casino reviews 2026, Vavada promo codes, 500 Casino bonuses, Boatbet VIP offers. Professional gambling affiliate marketing in Budapest and Prague.
 </div>
 
 <script>
@@ -200,8 +198,6 @@
         let current = parseInt(el.innerText);
         const change = Math.floor(Math.random() * 41) - 20; 
         let next = current + change;
-        if (next < 13435) next = 13500;
-        if (next > 18837) next = 18750;
         el.innerText = next;
     }
     setInterval(updateLive, 3000);
@@ -213,8 +209,6 @@
         if (Math.random() > 0.6) { 
             currentMembers += 1;
             memberEl.innerText = currentMembers;
-            memberEl.style.color = '#53fc18';
-            setTimeout(() => { memberEl.style.color = '#d4af37'; }, 2000);
         }
     }
     setInterval(updateMembers, 10000);
@@ -222,18 +216,6 @@
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js'); });
     }
-
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; });
-    document.getElementById('install-button').addEventListener('click', () => {
-        if (deferredPrompt) {
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then(() => {
-                document.getElementById('install-banner').style.display = 'none';
-                deferredPrompt = null;
-            });
-        }
-    });
 </script>
 
 </body>
