@@ -19,28 +19,29 @@
         
         .header { text-align: center; margin-bottom: 40px; }
         .header h1 { color: var(--gold); font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        .header p { color: var(--text-gray); }
+        .header p { color: var(--text-gray); font-size: 1.1rem; }
 
         /* Pricing Table */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-bottom: 50px;
         }
         .price-card {
             background: var(--card-bg);
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 20px;
             border: 1px solid #333;
             text-align: center;
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
         .price-card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .price-card h3 { color: var(--gold); margin-bottom: 15px; text-transform: uppercase; }
-        .price-card .amount { font-size: 2rem; font-weight: bold; margin-bottom: 10px; display: block; }
-        .price-card ul { list-style: none; color: var(--text-gray); font-size: 0.9rem; margin-top: 15px; }
-        .price-card ul li { margin-bottom: 8px; }
+        .price-card h3 { color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .price-card .amount { font-size: 2.2rem; font-weight: bold; margin-bottom: 15px; display: block; color: white; }
+        .price-card ul { list-style: none; color: var(--text-gray); font-size: 0.95rem; text-align: left; margin-top: 20px; }
+        .price-card ul li { margin-bottom: 12px; padding-left: 20px; position: relative; }
+        .price-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); }
 
         /* Form Section */
         .form-section {
@@ -48,48 +49,57 @@
             padding: 40px;
             border-radius: 20px;
             border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        .form-section h2 { color: var(--gold); margin-bottom: 25px; text-align: center; }
+        .form-section h2 { color: var(--gold); margin-bottom: 30px; text-align: center; text-transform: uppercase; }
 
         .input-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; color: var(--gold); font-weight: bold; font-size: 0.9rem; }
+        label { display: block; margin-bottom: 8px; color: var(--gold); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
         input, select, textarea {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             background: #252525;
             border: 1px solid #444;
             color: white;
-            border-radius: 8px;
+            border-radius: 10px;
             outline: none;
             font-size: 1rem;
+            transition: 0.3s;
         }
-        input:focus, textarea:focus { border-color: var(--gold); }
+        input:focus, select:focus, textarea:focus { border-color: var(--gold); background: #2a2a2a; }
 
         .submit-btn {
             width: 100%;
-            padding: 15px;
+            padding: 18px;
             background: var(--gold);
             color: black;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: bold;
             font-size: 1.1rem;
             cursor: pointer;
             text-transform: uppercase;
             transition: 0.3s;
             margin-top: 10px;
+            letter-spacing: 1px;
         }
-        .submit-btn:hover { background: #f1c40f; transform: scale(1.02); }
+        .submit-btn:hover { background: #f1c40f; transform: scale(1.02); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
 
         .back-btn {
             display: block;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
             color: var(--text-gray);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            transition: 0.3s;
         }
         .back-btn:hover { color: var(--gold); }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .form-section { padding: 25px; }
+        }
     </style>
 </head>
 <body>
@@ -97,7 +107,7 @@
 <div class="container">
     <div class="header">
         <h1>Advertise with Us</h1>
-        <p>Premium SEO Placement & PWA Traffic Acquisition</p>
+        <p>Strategic Partnership & SEO Traffic Acquisition</p>
     </div>
 
     <div class="pricing-grid">
@@ -105,9 +115,10 @@
             <h3>Tier 1 Alpha</h3>
             <span class="amount">€5,000 / mo</span>
             <ul>
-                <li>Top 1 Main Page Slot</li>
-                <li>Exclusive PWA Push Alerts</li>
-                <li>Full SEO Contextual Links</li>
+                <li>Top 1 Placement (Main Page)</li>
+                <li>PWA Native Push Notifications</li>
+                <li>Exclusive Telegram Sponsorship</li>
+                <li>Full SEO Contextual Authority</li>
             </ul>
         </div>
         <div class="price-card">
@@ -115,54 +126,57 @@
             <span class="amount">€3,000 / mo</span>
             <ul>
                 <li>Top 3 Placement</li>
-                <li>Weekly Telegram Shoutouts</li>
-                <li>Standard PWA Integration</li>
+                <li>Weekly Brand Highlights</li>
+                <li>PWA Traffic Integration</li>
+                <li>Standard SEO Indexing</li>
             </ul>
         </div>
     </div>
 
     <div class="form-section">
         <h2>Book Your Placement</h2>
+        
         <form action="https://formspree.io/f/xkovaqlz" method="POST">
             
             <div class="input-group">
                 <label>Name / Organization</label>
-                <input type="text" name="name" placeholder="Enter your brand name" required>
+                <input type="text" name="brand_name" placeholder="Enter your name or brand" required>
             </div>
 
             <div class="input-group">
-                <label>Business Email</label>
-                <input type="email" name="_replyto" placeholder="your@business.com" required>
+                <label>Work Email</label>
+                <input type="email" name="email" placeholder="manager@brand.com" required>
             </div>
 
             <div class="input-group">
                 <label>Telegram / Skype ID</label>
-                <input type="text" name="contact" placeholder="@yourhandle" required>
+                <input type="text" name="contact_id" placeholder="@yourhandle" required>
             </div>
 
             <div class="input-group">
-                <label>Select Ad Tier</label>
-                <select name="tier">
-                    <option value="tier1">Tier 1 Alpha - €5,000</option>
-                    <option value="tier2">Tier 2 Beta - €3,000</option>
+                <label>Select Ad Package</label>
+                <select name="tier_selection">
+                    <option value="tier1_alpha">Tier 1 Alpha - €5,000</option>
+                    <option value="tier2_beta">Tier 2 Beta - €3,000</option>
                     <option value="standard">Standard - €1,500</option>
-                    <option value="custom">Custom Deal</option>
+                    <option value="custom">Custom Partnership / Deal</option>
                 </select>
             </div>
 
             <div class="input-group">
-                <label>Additional Details</label>
-                <textarea name="message" rows="4" placeholder="Tell us about your campaign goals..."></textarea>
+                <label>Additional Information</label>
+                <textarea name="message" rows="5" placeholder="Tell us more about your campaign goals..."></textarea>
             </div>
 
-            <input type="hidden" name="_subject" value="New Ad Inquiry: Cocktailspins Network">
+            <input type="hidden" name="_subject" value="New Partnership Request: Cocktailspins Network">
 
             <button type="submit" class="submit-btn">Send Inquiry</button>
         </form>
     </div>
 
-    <a href="index.html" class="back-btn">← Return to Main Network</a>
+    <a href="index.html" class="back-btn">← Return to Main Network Dashboard</a>
 </div>
 
 </body>
 </html>
+
