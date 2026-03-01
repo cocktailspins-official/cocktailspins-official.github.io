@@ -3,48 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partner Registration | Cocktailspins Network</title>
+    <title>Advertise | Cocktailspins Media Network Hungary</title>
+    <meta name="description" content="Partner with Cocktailspins Media Network. Fixed fee advertising slots for premium casino brands in the HU/SK/CZ markets.">
+    <link rel="icon" type="image/jpg" href="1000017793.jpg">
+
     <style>
-        :root { --gold: #d4af37; --bg-black: #0a0a0a; }
-        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', sans-serif; padding: 20px; display: flex; justify-content: center; }
-        .form-card { background: #151515; border: 1px solid var(--gold); border-radius: 30px; padding: 30px; max-width: 450px; width: 100%; }
-        h1 { color: var(--gold); text-align: center; }
-        label { display: block; font-size: 0.8em; color: var(--gold); margin: 15px 0 5px 0; text-transform: uppercase; font-weight: bold; }
-        input, select, textarea { width: 100%; padding: 12px; background: #000; border: 1px solid #333; border-radius: 10px; color: white; box-sizing: border-box; }
-        .btn-submit { background: var(--gold); color: black; width: 100%; padding: 15px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; text-transform: uppercase; margin-top: 20px; }
+        :root { 
+            --gold: #d4af37; 
+            --bg-black: #0a0a0a; 
+            --card-bg: #151515;
+            --input-bg: #000;
+        }
+        
+        body { 
+            background: var(--bg-black); 
+            color: white; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .form-card { 
+            background: linear-gradient(145deg, var(--card-bg), #000); 
+            border: 1px solid var(--gold); 
+            border-radius: 30px; 
+            padding: 40px; 
+            max-width: 500px; 
+            width: 100%; 
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.15); 
+            text-align: center;
+        }
+
+        .logo-small {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            margin-bottom: 20px;
+        }
+
+        h1 { 
+            color: var(--gold); 
+            font-size: 1.8em; 
+            margin-bottom: 10px; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p { 
+            color: #888; 
+            font-size: 0.9em; 
+            margin-bottom: 30px; 
+            line-height: 1.4;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label { 
+            display: block; 
+            font-size: 0.75em; 
+            color: var(--gold); 
+            margin-bottom: 8px; 
+            text-transform: uppercase; 
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        input, select, textarea { 
+            width: 100%; 
+            padding: 14px; 
+            background: var(--input-bg); 
+            border: 1px solid #333; 
+            border-radius: 12px; 
+            color: white; 
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--gold);
+            outline: none;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-submit { 
+            background: var(--gold); 
+            color: black; 
+            width: 100%; 
+            padding: 16px; 
+            border: none; 
+            border-radius: 14px; 
+            font-weight: 900; 
+            cursor: pointer; 
+            text-transform: uppercase; 
+            font-size: 1em;
+            transition: 0.4s;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn-submit:hover { 
+            transform: translateY(-3px); 
+            filter: brightness(1.1);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 25px;
+            color: #555;
+            text-decoration: none;
+            font-size: 0.8em;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .form-card { padding: 25px; }
+            h1 { font-size: 1.5em; }
+        }
     </style>
 </head>
 <body>
 
 <div class="form-card">
-    <h1>PARTNER REGISTRATION</h1>
-    <p style="text-align: center; color: #888;">Submit your brand to our network.</p>
+    <img src="1000017793.jpg" alt="Cocktailspins Logo" class="logo-small">
+    <h1>Partner Registration</h1>
+    <p>Secure your advertising slot on the most advanced Casino SEO Network in Hungary.</p>
 
     <form action="https://formspree.io/f/streamerstv27@gmail.com" method="POST">
+        
         <label>Casino Brand Name</label>
-        <input type="text" name="casino_name" required>
+        <input type="text" name="casino_name" placeholder="e.g. Vavada, 500 Casino" required>
 
-        <label>Target Markets (e.g. HU, SK)</label>
-        <input type="text" name="markets" required>
-
-        <label>Deal Type</label>
-        <select name="offer_type">
-            <option value="CPA">CPA</option>
-            <option value="RevShare">RevShare</option>
-            <option value="Hybrid">Hybrid</option>
+        <label>Advertising Package (Fixed Fee)</label>
+        <select name="package_type" required>
+            <option value="" disabled selected>Select a package...</option>
+            <option value="Standard_Listing">Standard Listing (€400/mo)</option>
+            <option value="Premium_Slider">Premium Slider (€1,000/mo)</option>
+            <option value="Top3_Spotlight">Top 3 Spotlight (€2,500/mo)</option>
+            <option value="Full_Takeover">Full Network Takeover (Custom)</option>
         </select>
 
-        <label>Telegram / Skype Contact</label>
-        <input type="text" name="contact" required>
+        <label>Your Contact (Telegram / Skype)</label>
+        <input type="text" name="contact_handle" placeholder="@yourhandle" required>
 
-        <label>Message</label>
-        <textarea name="message" rows="3"></textarea>
+        <label>Target Markets</label>
+        <input type="text" name="geo_targets" placeholder="e.g. HU, SK, CZ" required>
+
+        <label>Message / Special Requirements</label>
+        <textarea name="message" rows="3" placeholder="Tell us more about your brand..."></textarea>
+
+        <input type="hidden" name="_subject" value="New Partnership Application - Fixed Fee">
 
         <button type="submit" class="btn-submit">Submit Application</button>
     </form>
-    <div style="text-align: center; margin-top: 15px;"><a href="index.html" style="color: #444; text-decoration: none;">← Back</a></div>
+    
+    <a href="index.html" class="back-link">← Back to Networking Portal</a>
 </div>
 
 </body>
 </html>
-
