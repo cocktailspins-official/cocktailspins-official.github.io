@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Elite | Cocktailspins Community</title>
+    <style>
+        :root { --gold: #d4af37; --bg-black: #050505; }
+        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
+        
+        .join-card { 
+            background: #111; 
+            border: 1px solid var(--gold); 
+            border-radius: 35px; 
+            padding: 40px; 
+            max-width: 450px; 
+            width: 100%; 
+            text-align: center;
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.1);
+        }
+
+        h1 { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        p { color: #888; font-size: 0.9em; margin-bottom: 30px; }
+
+        .input-group { text-align: left; margin-bottom: 20px; }
+        label { display: block; font-size: 0.7em; color: var(--gold); text-transform: uppercase; font-weight: bold; margin-bottom: 5px; }
+        input { width: 100%; padding: 14px; background: #000; border: 1px solid #333; border-radius: 12px; color: white; box-sizing: border-box; }
+        input:focus { border-color: var(--gold); outline: none; }
+
+        .btn-join { 
+            background: var(--gold); 
+            color: black; 
+            width: 100%; 
+            padding: 18px; 
+            border: none; 
+            border-radius: 15px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            cursor: pointer; 
+            transition: 0.3s;
+        }
+        .btn-join:hover { transform: scale(1.02); filter: brightness(1.1); }
+
+        .benefits { margin: 25px 0; font-size: 0.8em; color: #666; text-align: left; }
+        .benefits li { margin-bottom: 5px; list-style: none; }
+        .benefits li::before { content: "✓ "; color: var(--gold); }
+    </style>
+</head>
+<body>
+
+<div class="join-card">
+    <img src="1000017793.jpg" width="70" style="border-radius: 50%; border: 2px solid var(--gold); margin-bottom: 20px;">
+    <h1>Become a Member</h1>
+    <p>Get exclusive bonus drops, private giveaway alerts, and VIP network status.</p>
+
+    <form action="https://formspree.io/f/streamerstv27@gmail.com" method="POST">
+        <div class="input-group">
+            <label>Full Name / Nickname</label>
+            <input type="text" name="name" placeholder="How should we call you?" required>
+        </div>
+
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Your best email" required>
+        </div>
+
+        <div class="input-group">
+            <label>Telegram Handle (Optional)</label>
+            <input type="text" name="telegram" placeholder="@yourname">
+        </div>
+
+        <ul class="benefits">
+            <li>Early access to high-limit bonuses</li>
+            <li>Member-only Telegram group access</li>
+            <li>Weekly giveaway participation</li>
+        </ul>
+
+        <input type="hidden" name="_subject" value="New VIP Member Registration">
+        <button type="submit" class="btn-join">Join the Elite Club</button>
+    </form>
+
+    <a href="index.html" style="display: block; margin-top: 20px; color: #444; text-decoration: none; font-size: 0.8em;">← Back to Home</a>
+</div>
+
+</body>
+</html>
+
