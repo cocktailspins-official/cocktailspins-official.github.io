@@ -20,14 +20,12 @@
         h1 { font-size: 2.2em; margin: 10px 0; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-weight: 900; }
         h2 { font-size: 0.75em; color: var(--gold); font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin: 30px 0 15px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: inline-block; padding-bottom: 5px; }
         
-        /* SLIDER */
         .ticker { width: 100%; overflow: hidden; background: rgba(212, 175, 55, 0.05); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); margin: 30px 0; padding: 15px 0; }
         .ticker-track { display: flex; width: calc(180px * 14); animation: scroll 25s linear infinite; }
         .ticker-item { width: 160px; height: 70px; margin: 0 10px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; background: #000; overflow: hidden; }
         .ticker-item img { max-width: 85%; max-height: 75%; object-fit: contain; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-180px * 7)); } }
 
-        /* PREMIUM CARDS */
         .premium-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
         .premium-card { background: linear-gradient(145deg, #1a1a1a, #050505); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 20px; padding: 18px; display: flex; align-items: center; gap: 15px; transition: 0.4s; text-decoration: none; color: white; position: relative; }
         .premium-card::after { content: "PREMIUM"; position: absolute; top: 0; right: 0; background: var(--gold); color: black; font-size: 0.55em; font-weight: bold; padding: 2px 8px; border-bottom-left-radius: 10px; }
@@ -35,12 +33,19 @@
         .premium-info h3 { margin: 0; font-size: 1.1em; }
         .premium-info p { margin: 0; font-size: 0.75em; color: var(--kick-green); font-weight: bold; }
 
-        /* BUSINESS DASHBOARD & COUNTERS */
         .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 25px; padding: 30px; margin: 30px 0; text-align: left; border-left: 4px solid var(--gold); }
         .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
-        .stat-card { background: rgba(255,255,255,0.04); padding: 15px; border-radius: 15px; border: 1px solid rgba(212,175,55,0.1); text-align: center; transition: 0.3s; }
-        .stat-card strong { color: #fff; font-size: 1.4em; display: block; }
+        .stat-card { background: rgba(255,255,255,0.04); padding: 15px; border-radius: 15px; border: 1px solid rgba(212,175,55,0.1); text-align: center; }
+        .stat-card strong { color: white; font-size: 1.4em; display: block; }
         .stat-card span { color: #888; font-size: 0.7em; text-transform: uppercase; }
+
+        /* PULZUJÚCI EFEKT PRE COUNTER */
+        .pulse-gold { animation: pulse-animation 3s infinite; }
+        @keyframes pulse-animation {
+            0% { text-shadow: 0 0 0px rgba(212, 175, 55, 0); }
+            50% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8); transform: scale(1.05); }
+            100% { text-shadow: 0 0 0px rgba(212, 175, 55, 0); }
+        }
 
         .traffic-box { margin-top: 25px; background: rgba(0,0,0,0.4); border-radius: 20px; padding: 20px; border: 1px solid rgba(212,175,55,0.1); }
         .traffic-line { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.9em; }
@@ -48,14 +53,11 @@
         .dot { width: 8px; height: 8px; background: var(--kick-green); border-radius: 50%; display: inline-block; margin-right: 6px; animation: blink 1.5s infinite; }
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
 
-        /* BUTTONS */
         .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 30px; }
         .btn { padding: 18px; border-radius: 12px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9em; transition: 0.3s; color: white; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; min-height: 60px; }
         
-        /* NOVE INTEGRACIE */
         .btn-vip { background: #fff; color: #000; grid-column: 1 / -1; font-weight: 900; }
         .btn-packages { background: linear-gradient(45deg, #d4af37, #000); color: #d4af37; border: 1px solid #d4af37; grid-column: 1 / -1; margin-bottom: 5px; }
-        
         .btn-reviews { background: var(--gold); color: black; grid-column: 1 / -1; font-size: 1.1em; }
         .btn-advertise { background: rgba(255,255,255,0.1); color: white; grid-column: 1 / -1; border: 1px solid #333; }
         
@@ -66,7 +68,6 @@
         .btn-insta { background: linear-gradient(45deg, #f09433, #e31682, #8a3ab9); }
         .btn-gmail { background: #ea4335; }
 
-        /* INSTALL BANNER */
         #install-banner { position: fixed; bottom: 20px; left: 20px; right: 20px; background: #111; border: 1px solid var(--gold); border-radius: 20px; padding: 15px; display: flex; align-items: center; justify-content: space-between; z-index: 10000; box-shadow: 0 0 30px rgba(0,0,0,0.8); }
         #install-button { background: var(--gold); color: black; border: none; padding: 10px 15px; border-radius: 10px; font-weight: bold; cursor: pointer; }
 
@@ -117,10 +118,10 @@
         <div class="stats-dashboard">
             <div class="stat-card"><strong>29,412+</strong><span>Unique Visitors</span></div>
             
-            <div class="stat-card" style="border: 1px solid var(--gold); background: rgba(212, 175, 55, 0.05);">
-                <strong id="member-count" style="color: var(--gold);">842</strong>
-                <span style="color: var(--gold); font-weight: bold;">VIP Club Members</span>
-                <div style="font-size: 0.5em; color: var(--kick-green); margin-top: 5px;">● VERIFIED NETWORK</div>
+            <div class="stat-card" style="border: 2px solid var(--gold); background: rgba(212, 175, 55, 0.15); overflow: hidden;">
+                <strong id="member-count" class="pulse-gold" style="color: var(--gold); font-size: 1.8em; margin-bottom: 2px;">1248</strong>
+                <span style="color: var(--gold); font-weight: 900; font-size: 0.65em;">VIP CLUB MEMBERS</span>
+                <div style="font-size: 0.5em; color: var(--kick-green); margin-top: 5px; font-weight: bold;">● VERIFIED NETWORK</div>
             </div>
 
             <div class="stat-card"><strong>700+</strong><span>Monthly Regs</span></div>
@@ -138,9 +139,7 @@
 
     <div class="links-grid">
         <a href="join.html" class="btn btn-vip">👑 JOIN COCKTAILSPINS VIP CLUB (FREE)</a>
-
         <a href="packages.html" class="btn btn-packages">💎 VIEW MEDIA PACKAGES & PRICING</a>
-
         <a href="reviews.html" class="btn btn-reviews">⭐ EXPLORE REVIEWS & BONUSES ⭐</a>
         <a href="advertise.html" class="btn btn-advertise">🚀 WORK WITH ME (ADVERTISE)</a>
         
@@ -155,12 +154,8 @@
     <div class="footer">Professional Casino Brand Promoter | 2026 Hub</div>
 </div>
 
-<div style="height: 1px; width: 1px; overflow: hidden; opacity: 0; position: absolute;">
-    Cocktailspins is the leading gambling affiliate network in Hungary. We provide high-quality organic traffic and exclusive casino reviews for brands like NV Casino, Boatbet, Vavada, and 500 Casino. Best casino bonuses 2026, gambling SEO Budapest, and high-roller acquisition strategies.
-</div>
-
 <script>
-    // LIVE ACTIVE USERS SCRIPT
+    // Live Users logic
     function updateLive() {
         const el = document.getElementById('live-users');
         if(!el) return;
@@ -173,21 +168,21 @@
     }
     setInterval(updateLive, 3000);
 
-    // VIP MEMBERS COUNTER SCRIPT (SIMULÁCIA REGISTRÁCIÍ)
+    // VIP Members Counter logic
     function updateMembers() {
         const memberEl = document.getElementById('member-count');
         if(!memberEl) return;
         let currentMembers = parseInt(memberEl.innerText);
-        if (Math.random() > 0.8) { // 20% šanca na nového člena
+        if (Math.random() > 0.6) { 
             currentMembers += 1;
             memberEl.innerText = currentMembers;
-            memberEl.style.color = '#53fc18'; // Blikne na zeleno
-            setTimeout(() => { memberEl.style.color = '#d4af37'; }, 1000);
+            memberEl.style.color = '#53fc18';
+            setTimeout(() => { memberEl.style.color = '#d4af37'; }, 2000);
         }
     }
-    setInterval(updateMembers, 12000);
+    setInterval(updateMembers, 10000);
 
-    // PWA & INSTALL SCRIPT
+    // PWA logic
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js'); });
     }
