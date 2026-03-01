@@ -3,126 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocktailspins | Premier Casino Media & Affiliate Network</title>
+    <title>Cocktailspins | Professional Casino Promoter</title>
     <style>
         :root { --gold: #d4af37; --kick-green: #53fc18; --bg-black: #0a0a0a; --glass: rgba(255, 255, 255, 0.03); }
         body { background: var(--bg-black); color: white; font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; display: flex; justify-content: center; padding: 20px; overflow-x: hidden; line-height: 1.6; }
         
-        .main-card { background: linear-gradient(145deg, #151515, #000); border: 1px solid var(--gold); border-radius: 40px; max-width: 900px; width: 100%; padding: 40px; text-align: center; box-shadow: 0 0 60px rgba(212, 175, 55, 0.2); }
+        .main-card { background: linear-gradient(145deg, #151515, #000); border: 1px solid var(--gold); border-radius: 40px; max-width: 850px; width: 100%; padding: 40px; text-align: center; box-shadow: 0 0 50px rgba(212, 175, 55, 0.15); }
         
-        .logo-main { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--gold); margin-bottom: 20px; box-shadow: 0 0 25px var(--gold); }
-        h1 { font-size: 3em; margin: 10px 0; color: var(--gold); text-transform: uppercase; letter-spacing: 5px; font-weight: 900; }
+        .logo-main { width: 130px; height: 130px; border-radius: 50%; border: 3px solid var(--gold); margin-bottom: 20px; box-shadow: 0 0 25px var(--gold); }
+        h1 { font-size: 2.8em; margin: 10px 0; color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-weight: 900; }
         
-        /* TICKER */
-        .ticker { width: 100%; overflow: hidden; background: rgba(212, 175, 55, 0.05); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); margin: 25px 0; padding: 15px 0; }
+        /* SLIDER */
+        .ticker { width: 100%; overflow: hidden; background: rgba(212, 175, 55, 0.05); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); margin: 30px 0; padding: 15px 0; }
         .ticker-track { display: flex; width: calc(180px * 14); animation: scroll 25s linear infinite; }
-        .ticker-item { width: 160px; height: 70px; margin: 0 10px; display: flex; align-items: center; justify-content: center; }
-        .ticker-item img { max-width: 85%; max-height: 75%; object-fit: contain; filter: grayscale(0.5); transition: 0.3s; }
-        .ticker-item img:hover { filter: grayscale(0); }
+        .ticker-item { width: 160px; height: 70px; margin: 0 10px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; background: #000; overflow: hidden; }
+        .ticker-item img { max-width: 85%; max-height: 75%; object-fit: contain; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-180px * 7)); } }
 
-        /* --- PREMIUM FEATURED BRANDS (TO ČO CHÝBALO) --- */
-        .premium-section { margin: 30px 0; text-align: left; }
+        /* NEW: PREMIUM FEATURED BRANDS SECTION */
+        .premium-section { margin: 20px 0 30px 0; text-align: left; }
         .section-label { color: var(--gold); font-size: 0.7em; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; display: block; text-align: center; }
-        
-        .premium-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .premium-card { background: linear-gradient(145deg, #1a1a1a, #0a0a0a); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 20px; padding: 20px; display: flex; align-items: center; gap: 15px; transition: 0.4s; text-decoration: none; color: white; position: relative; overflow: hidden; }
-        .premium-card:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15); }
-        .premium-card::before { content: "PREMIUM PARTNER"; position: absolute; top: 0; right: 0; background: var(--gold); color: black; font-size: 0.5em; font-weight: bold; padding: 2px 10px; border-bottom-left-radius: 10px; }
-        
-        .premium-logo { width: 60px; height: 60px; background: #000; border-radius: 12px; padding: 5px; border: 1px solid rgba(255,255,255,0.1); object-fit: contain; }
-        .premium-info h3 { margin: 0; font-size: 1.1em; color: #fff; }
-        .premium-info p { margin: 0; font-size: 0.75em; color: var(--kick-green); font-weight: bold; }
+        .premium-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .premium-card { background: linear-gradient(145deg, #1a1a1a, #050505); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 20px; padding: 15px; display: flex; align-items: center; gap: 15px; transition: 0.4s; text-decoration: none; color: white; position: relative; }
+        .premium-card:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); }
+        .premium-card::after { content: "PREMIUM"; position: absolute; top: 0; right: 0; background: var(--gold); color: black; font-size: 0.55em; font-weight: bold; padding: 2px 8px; border-bottom-left-radius: 10px; }
+        .premium-logo { width: 50px; height: 50px; object-fit: contain; background: #000; border-radius: 10px; padding: 5px; border: 1px solid rgba(255,255,255,0.1); }
+        .premium-info h3 { margin: 0; font-size: 1em; }
+        .premium-info p { margin: 0; font-size: 0.7em; color: var(--kick-green); font-weight: bold; }
 
-        /* B2B DASHBOARD */
-        .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 30px; padding: 30px; margin: 30px 0; text-align: left; border-left: 4px solid var(--gold); }
-        .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 25px; }
-        .stat-card { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 15px; border: 1px solid rgba(212,175,55,0.1); text-align: center; }
-        .stat-card strong { color: var(--gold); font-size: 1.5em; display: block; }
+        /* BUSINESS DASHBOARD */
+        .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 25px; padding: 30px; margin: 30px 0; text-align: left; border-left: 4px solid var(--gold); }
+        .biz-title { color: var(--gold); font-size: 1.3em; font-weight: bold; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+        .stat-card { background: rgba(255,255,255,0.04); padding: 15px; border-radius: 15px; border: 1px solid rgba(212,175,55,0.1); text-align: center; }
+        .stat-card strong { color: var(--gold); font-size: 1.4em; display: block; }
         .stat-card span { color: #888; font-size: 0.7em; text-transform: uppercase; }
 
-        /* LINKS */
-        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
-        .btn { padding: 16px; border-radius: 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8em; transition: 0.3s; color: white; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; }
-        .btn:hover { transform: translateY(-3px); filter: brightness(1.2); }
-        
-        .btn-reviews { background: var(--gold); color: black; grid-column: 1 / -1; font-size: 1.1em; flex-direction: row; gap: 10px; margin-bottom: 10px; }
-        .btn-advertise { background: #fff; color: black; grid-column: 1 / -1; margin-bottom: 10px; }
-        .btn-kick { background: var(--kick-green); color: black; }
-        .btn-tg-personal { background: #229ED9; }
-        .btn-gmail { background: #ea4335; }
-
-        .footer { margin-top: 50px; font-size: 0.7em; color: #444; text-transform: uppercase; letter-spacing: 2px; }
-    </style>
-</head>
-<body>
-
-<div class="main-card">
-    <img src="1000017793.jpg" alt="Cocktailspins" class="logo-main">
-    <h1>COCKTAILSPINS</h1>
-    <p style="color: var(--gold); font-weight: bold; letter-spacing: 3px; font-size: 0.8em;">GLOBAL CASINO MEDIA NETWORK</p>
-
-    <div class="ticker">
-        <div class="ticker-track">
-            <div class="ticker-item"><img src="cropped-cropped-vavada-logo.png"></div>
-            <div class="ticker-item"><img src="500-Casino.png"></div>
-            <div class="ticker-item"><img src="betalice-casino.png"></div>
-            <div class="ticker-item"><img src="boatbet-logo.png"></div>
-            <div class="ticker-item"><img src="royalsea.png"></div>
-            <div class="ticker-item"><img src="images (16).jpeg"></div>
-            <div class="ticker-item"><img src="images (17).jpeg"></div>
-            <div class="ticker-item"><img src="cropped-cropped-vavada-logo.png"></div>
-            <div class="ticker-item"><img src="500-Casino.png"></div>
-            <div class="ticker-item"><img src="betalice-casino.png"></div>
-            <div class="ticker-item"><img src="boatbet-logo.png"></div>
-            <div class="ticker-item"><img src="royalsea.png"></div>
-            <div class="ticker-item"><img src="images (16).jpeg"></div>
-            <div class="ticker-item"><img src="images (17).jpeg"></div>
-        </div>
-    </div>
-
-    <div class="premium-section">
-        <span class="section-label">Premium Featured Brands</span>
-        <div class="premium-grid">
-            <a href="https://lnk.ua/be8BwDyN5" class="premium-card">
-                <img src="images (16).jpeg" class="premium-logo" alt="NV">
-                <div class="premium-info">
-                    <h3>NV CASINO</h3>
-                    <p>EXCLUSIVE 100% BONUS</p>
-                </div>
-            </a>
-            <a href="https://tinyurl.com/infiaff?bid=219&lid=209&aid=SRSrWLqM3&cid=6991" class="premium-card">
-                <img src="boatbet-logo.png" class="premium-logo" alt="Boatbet">
-                <div class="premium-info">
-                    <h3>BOATBET</h3>
-                    <p>TOP VIP REWARDS</p>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div class="business-container">
-        <div class="stats-dashboard">
-            <div class="stat-card"><strong>700+</strong><span>Monthly Regs</span></div>
-            <div class="stat-card"><strong>500+</strong><span>Monthly FTDs</span></div>
-            <div class="stat-card"><strong>700+</strong><span>Avg. Live Viewers</span></div>
-        </div>
-        <p style="font-size: 0.85em; color: #888; margin: 0;">Main GEOs: <b>HU, SK, CZ, DE</b> | Traffic Quality: <b>High LTV Organic</b></p>
-    </div>
-
-    <div class="links-grid">
-        <a href="reviews.html" class="btn btn-reviews">💎 ACCESS ALL CASINO REVIEWS 💎</a>
-        <a href="advertise.html" class="btn btn-advertise">🚀 WORK WITH ME (ADVERTISE)</a>
-        
-        <a href="https://t.me/cocktailsp" target="_blank" class="btn btn-tg-personal">Business Telegram<small>@cocktailsp</small></a>
-        <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">Business Email<small>Inquiries</small></a>
-        <a href="https://kick.com/cocktailspins" target="_blank" class="btn btn-kick">Kick.com<small>Live Stream</small></a>
-        <a href="https://t.me/cocktailspinowner" target="_blank" class="btn btn-tg-group">Telegram Group<small>Community</small></a>
-    </div>
-
-    <div class="footer">Cocktailspins Media | The Highest Converting Network | 2026</div>
-</div>
-
-</body>
-</html>
+        .perf-box { margin-top: 25px; background: rgba(83, 252, 24, 0.03); border: 1px solid rgba(83, 252, 24, 0.1); border-radius: 20px; padding: 20px; }
+        .perf-title { color: var(--kick-green); font-size: 0.9em; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
+        .perf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .perf-item { border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; }
+        .perf-item small { display: block; color: #666; font-size: 0.75em; }
+        .perf-item b { color: #fff; font-size
 
