@@ -1,0 +1,35 @@
+# ==========================================================
+# COCKTAILSPINS MEDIA NETWORK - ADVANCED SEO ROBOTS SYSTEM
+# AUTHORIZED ACCESS ONLY
+# ==========================================================
+
+# 1. Global Crawler Rules
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /reviews.html
+Allow: /advertise.html
+
+# 2. Performance Optimization: Block useless crawlers to save server resources
+Disallow: /*.tmp$
+Disallow: /*.log$
+Disallow: /*.json$
+
+# 3. Googlebot Specific Optimization
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# 4. Media & Image SEO Optimization
+User-agent: Googlebot-Image
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+
+# 5. Direct Sitemap Link (The most critical part for Semrush)
+Sitemap: https://cocktailspins-official.github.io/sitemap.xml
+
+# ==========================================================
+# END OF ROBOTS.TXT - OPTIMIZED FOR 2026 iGAMING STANDARDS
+# ==========================================================
