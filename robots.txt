@@ -1,6 +1,6 @@
 # ==========================================================
 # COCKTAILSPINS MEDIA NETWORK - ADVANCED SEO ROBOTS SYSTEM
-# AUTHORIZED ACCESS ONLY
+# AUTHORIZED ACCESS ONLY - OPTIMIZED FOR 2026 STANDARDS
 # ==========================================================
 
 # 1. Global Crawler Rules
@@ -9,8 +9,9 @@ Allow: /
 Allow: /index.html
 Allow: /reviews.html
 Allow: /advertise.html
+Allow: /join.html
 
-# 2. Performance Optimization: Block useless crawlers to save server resources
+# 2. Performance Optimization: Block useless files
 Disallow: /*.tmp$
 Disallow: /*.log$
 Disallow: /*.json$
@@ -27,9 +28,9 @@ Allow: /*.jpeg$
 Allow: /*.png$
 Allow: /*.gif$
 
-# 5. Direct Sitemap Link (The most critical part for Semrush)
+# 5. Direct Sitemap Link
 Sitemap: https://cocktailspins-official.github.io/sitemap.xml
 
 # ==========================================================
-# END OF ROBOTS.TXT - OPTIMIZED FOR 2026 iGAMING STANDARDS
+# END OF ROBOTS.TXT
 # ==========================================================
