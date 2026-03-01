@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="hu"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocktailspins | Professional Casino Promoter & SEO Network</title>
-    <meta name="description" content="Official Cocktailspins Media Network. Professional casino promoter and SEO traffic specialist for HU, SK, CZ, and DE markets. 500+ Monthly FTDs.">
-    <meta name="keywords" content="cocktailspins, casino promoter, casino bonus sk, online casino reviews, gambling traffic hu, sk, cz">
+    <title>Cocktailspins | Prémium Kaszinó Promóter & SEO Hálózat - Hungary</title>
+    <meta name="description" content="Hivatalos Cocktailspins Media Network. Professzionális kaszinó promóter és SEO szakértő a magyar piacon. 500+ havi FTD és exkluzív bónuszok.">
+    <meta name="keywords" content="cocktailspins, kaszinó promóter, online kaszinó bónusz, magyar kaszinó vélemények, szerencsejáték SEO, Hungary casino traffic">
     <link rel="canonical" href="https://cocktailspins-official.github.io/">
+    
+    <meta name="geo.region" content="HU" />
+    <meta name="geo.placename" content="Budapest" />
+    <meta name="geo.position" content="47.4979;19.0402" />
+    <meta name="ICBM" content="47.4979, 19.0402" />
+
     <link rel="icon" type="image/jpg" href="1000017793.jpg">
+    <link rel="apple-touch-icon" href="1000017793.jpg">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Cocktailspins Media Network",
+      "name": "Cocktailspins Media Network Hungary",
       "url": "https://cocktailspins-official.github.io/",
       "logo": "https://cocktailspins-official.github.io/1000017793.jpg",
-      "description": "Professional casino advertising network and SEO specialist for HU, SK, CZ, and DE markets.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Budapest",
+        "addressCountry": "HU"
+      },
+      "description": "Magyarország vezető kaszinó hirdetési hálózata és SEO specialistája.",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -34,14 +49,12 @@
         .logo-main { width: 130px; height: 130px; border-radius: 50%; border: 3px solid var(--gold); margin-bottom: 20px; box-shadow: 0 0 25px var(--gold); }
         h1 { font-size: 2.8em; margin: 10px 0; color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-weight: 900; }
         
-        /* SLIDER */
         .ticker { width: 100%; overflow: hidden; background: rgba(212, 175, 55, 0.05); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold); margin: 30px 0; padding: 15px 0; }
         .ticker-track { display: flex; width: calc(180px * 14); animation: scroll 25s linear infinite; }
         .ticker-item { width: 160px; height: 70px; margin: 0 10px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; background: #000; overflow: hidden; }
         .ticker-item img { max-width: 85%; max-height: 75%; object-fit: contain; }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-180px * 7)); } }
 
-        /* PREMIUM BRANDS */
         .premium-section { margin: 20px 0 30px 0; text-align: left; }
         .section-label { color: var(--gold); font-size: 0.7em; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; display: block; text-align: center; }
         .premium-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
@@ -52,7 +65,6 @@
         .premium-info h3 { margin: 0; font-size: 1.1em; }
         .premium-info p { margin: 0; font-size: 0.75em; color: var(--kick-green); font-weight: bold; }
 
-        /* DASHBOARD */
         .business-container { background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 25px; padding: 30px; margin: 30px 0; text-align: left; border-left: 4px solid var(--gold); }
         .biz-title { color: var(--gold); font-size: 1.3em; font-weight: bold; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
         .stats-dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
@@ -60,15 +72,13 @@
         .stat-card strong { color: var(--gold); font-size: 1.4em; display: block; }
         .stat-card span { color: #888; font-size: 0.7em; text-transform: uppercase; }
 
-        /* LIVE ANALYTICS */
         .traffic-box { margin-top: 25px; background: rgba(0,0,0,0.4); border-radius: 20px; padding: 20px; border: 1px solid rgba(212,175,55,0.1); }
-        .traffic-line { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9em; }
+        .traffic-line { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.9em; }
         .traffic-label { color: #888; }
         .traffic-val { color: var(--kick-green); font-weight: bold; }
         .dot { width: 8px; height: 8px; background: var(--kick-green); border-radius: 50%; display: inline-block; margin-right: 6px; animation: blink 1.5s infinite; }
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
 
-        /* BUTTONS */
         .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 30px; }
         .btn { padding: 18px; border-radius: 12px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9em; transition: 0.3s; color: white; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; min-height: 60px; }
         .btn:hover { transform: translateY(-3px); filter: brightness(1.2); }
@@ -82,16 +92,13 @@
         .btn-insta { background: linear-gradient(45deg, #f09433, #e31682, #8a3ab9); }
         .btn-gmail { background: #ea4335; }
 
-        /* MOBILE OPTIMIZATION (THE FIX) */
         @media (max-width: 600px) {
             body { padding: 10px; }
             .main-card { padding: 25px 15px; border-radius: 25px; }
             h1 { font-size: 1.8em; letter-spacing: 2px; }
-            .logo-main { width: 100px; height: 100px; }
             .premium-grid { grid-template-columns: 1fr; }
             .stats-dashboard { grid-template-columns: 1fr 1fr; }
             .links-grid { grid-template-columns: 1fr; gap: 10px; }
-            .btn { padding: 20px; font-size: 1em; }
         }
 
         .footer { margin-top: 40px; font-size: 0.75em; color: #444; }
@@ -100,82 +107,77 @@
 <body>
 
 <div class="main-card">
-    <img src="1000017793.jpg" alt="Cocktailspins Official Branding Logo" class="logo-main">
+    <img src="1000017793.jpg" alt="Cocktailspins Hungary Logo" class="logo-main">
     <h1>COCKTAILSPINS</h1>
-    <p style="color: var(--gold); font-weight: bold; letter-spacing: 2px; font-size: 0.8em;">PREMIUM CASINO PROMOTER & SEO NETWORK</p>
+    <p style="color: var(--gold); font-weight: bold; letter-spacing: 2px; font-size: 0.8em;">PREMIUM CASINO PROMOTER & SEO NETWORK | HUNGARY</p>
 
     <div class="ticker">
         <div class="ticker-track">
-            <div class="ticker-item"><img src="cropped-cropped-vavada-logo.png" alt="Vavada Partner"></div>
-            <div class="ticker-item"><img src="500-Casino.png" alt="500 Casino Partner"></div>
-            <div class="ticker-item"><img src="betalice-casino.png" alt="Betalice Partner"></div>
-            <div class="ticker-item"><img src="boatbet-logo.png" alt="Boatbet Partner"></div>
-            <div class="ticker-item"><img src="royalsea.png" alt="Royalsea Partner"></div>
-            <div class="ticker-item"><img src="images (16).jpeg" alt="NV Casino Partner"></div>
-            <div class="ticker-item"><img src="images (17).jpeg" alt="Casino Partner"></div>
-            <div class="ticker-item"><img src="cropped-cropped-vavada-logo.png" alt="Vavada Partner"></div>
-            <div class="ticker-item"><img src="500-Casino.png" alt="500 Casino Partner"></div>
-            <div class="ticker-item"><img src="betalice-casino.png" alt="Betalice Partner"></div>
-            <div class="ticker-item"><img src="boatbet-logo.png" alt="Boatbet Partner"></div>
-            <div class="ticker-item"><img src="royalsea.png" alt="Royalsea Partner"></div>
-            <div class="ticker-item"><img src="images (16).jpeg" alt="NV Casino Partner"></div>
-            <div class="ticker-item"><img src="images (17).jpeg" alt="Casino Partner"></div>
+            <div class="ticker-item"><img src="cropped-cropped-vavada-logo.png" alt="Vavada Hungary"></div>
+            <div class="ticker-item"><img src="500-Casino.png" alt="500 Casino"></div>
+            <div class="ticker-item"><img src="betalice-casino.png" alt="Betalice"></div>
+            <div class="ticker-item"><img src="boatbet-logo.png" alt="Boatbet"></div>
+            <div class="ticker-item"><img src="royalsea.png" alt="Royalsea"></div>
+            <div class="ticker-item"><img src="images (16).jpeg" alt="NV Casino"></div>
+            <div class="ticker-item"><img src="images (17).jpeg" alt="Partner Casino"></div>
+            <div class="ticker-item"><img src="cropped-cropped-vavada-logo.png" alt="Vavada"></div>
+            <div class="ticker-item"><img src="500-Casino.png" alt="500 Casino"></div>
+            <div class="ticker-item"><img src="betalice-casino.png" alt="Betalice"></div>
+            <div class="ticker-item"><img src="boatbet-logo.png" alt="Boatbet"></div>
+            <div class="ticker-item"><img src="royalsea.png" alt="Royalsea"></div>
+            <div class="ticker-item"><img src="images (16).jpeg" alt="NV Casino"></div>
+            <div class="ticker-item"><img src="images (17).jpeg" alt="Partner"></div>
         </div>
     </div>
 
     <div class="premium-section">
-        <span class="section-label">Premium Featured Brands</span>
+        <span class="section-label">Top Hungary Casino Brands</span>
         <div class="premium-grid">
             <a href="https://lnk.ua/be8BwDyN5" target="_blank" class="premium-card">
-                <img src="images (16).jpeg" class="premium-logo" alt="NV Casino Offer">
-                <div class="premium-info"><h3>NV CASINO</h3><p>EXCLUSIVE 100% BONUS</p></div>
+                <img src="images (16).jpeg" class="premium-logo" alt="NV Casino Hungary">
+                <div class="premium-info"><h3>NV CASINO</h3><p>EXCLUSIVE 100% BONUS HU</p></div>
             </a>
             <a href="https://tinyurl.com/infiaff?bid=219&lid=209&aid=SRSrWLqM3&cid=6991" target="_blank" class="premium-card">
-                <img src="boatbet-logo.png" class="premium-logo" alt="Boatbet VIP Offer">
-                <div class="premium-info"><h3>BOATBET</h3><p>TOP VIP REWARDS</p></div>
+                <img src="boatbet-logo.png" class="premium-logo" alt="Boatbet Hungary">
+                <div class="premium-info"><h3>BOATBET</h3><p>MAGYAR VIP REWARDS</p></div>
             </a>
         </div>
     </div>
 
     <div class="business-container">
-        <div class="biz-title">📊 Partnership Performance Report</div>
+        <div class="biz-title">📊 Regional Performance: Hungary</div>
         <div class="stats-dashboard">
-            <div class="stat-card"><strong>29,412+</strong><span>Unique Visitors</span></div>
+            <div class="stat-card"><strong>29,412+</strong><span>HU Unique Visitors</span></div>
             <div class="stat-card"><strong>700+</strong><span>Monthly Regs</span></div>
             <div class="stat-card"><strong>500+</strong><span>Monthly FTDs</span></div>
         </div>
 
         <div class="traffic-box">
             <div class="traffic-line">
-                <span class="traffic-label"><span class="dot"></span> Live Active Users</span>
+                <span class="traffic-label"><span class="dot"></span> Live Active Users (HU)</span>
                 <span class="traffic-val" id="live-users">15482</span>
             </div>
             <div class="traffic-line">
                 <span class="traffic-label">Organic SEO Dominance</span>
                 <span class="traffic-val" style="color:#fff">82.4%</span>
             </div>
-            <div class="traffic-line">
-                <span class="traffic-label">Avg. Monthly Growth</span>
-                <span class="traffic-val" style="color:#fff">+18.5%</span>
-            </div>
         </div>
     </div>
 
     <div class="links-grid">
-        <a href="reviews.html" class="btn btn-reviews">⭐ EXPLORE REVIEWS & BONUSES ⭐</a>
-        <a href="advertise.html" class="btn btn-advertise">🚀 WORK WITH ME (ADVERTISE)</a>
-        <a href="https://kick.com/cocktailspins" target="_blank" class="btn btn-kick">Kick.com<small>Live Stream</small></a>
-        <a href="https://www.twitch.tv/cocktailspins" target="_blank" class="btn btn-twitch">Twitch.tv<small>Live Stream</small></a>
+        <a href="reviews.html" class="btn btn-reviews">⭐ KASZINÓ VÉLEMÉNYEK & BÓNUSZOK ⭐</a>
+        <a href="advertise.html" class="btn btn-advertise">🚀 HIRDETÉS (BUSINESS INQUIRY)</a>
+        <a href="https://kick.com/cocktailspins" target="_blank" class="btn btn-kick">Kick.com<small>Magyar Stream</small></a>
         <a href="https://t.me/cocktailspinowner" target="_blank" class="btn btn-tg-group">Telegram Group<small>Community</small></a>
-        <a href="https://t.me/cocktailsp" target="_blank" class="btn btn-tg-personal">Business Contact<small>Personal Telegram</small></a>
-        <a href="https://www.instagram.com/cocktailspins/" target="_blank" class="btn btn-insta">Instagram<small>Daily Updates</small></a>
-        <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">Email Me<small>Business Inquiry</small></a>
+        <a href="https://t.me/cocktailsp" target="_blank" class="btn btn-tg-personal">Business Telegram<small>Personal Contact</small></a>
+        <a href="mailto:streamerstv27@gmail.com" class="btn btn-gmail">Email Me<small>Official Channel</small></a>
     </div>
 
-    <div class="footer">Professional Casino Brand Promoter | 2026 Portfolio</div>
+    <div class="footer">Professional Casino Brand Promoter | Hungary Network 2026</div>
 </div>
 
 <script>
+    // Live Counter (13k-18k)
     function updateLive() {
         const el = document.getElementById('live-users');
         if(!el) return;
@@ -187,6 +189,15 @@
         el.innerText = next;
     }
     setInterval(updateLive, 3000);
+
+    // PWA Registration
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('Cocktailspins HU App Active'))
+                .catch(err => console.log('App Error', err));
+        });
+    }
 </script>
 
 </body>
