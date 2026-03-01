@@ -3,168 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Casino Reviews | Cocktailspins Network</title>
+    <title>Casino Reviews | Cocktailspins Elite Network</title>
     <style>
-        :root { --gold: #d4af37; --bg-black: #0a0a0a; --card-bg: #151515; --kick-green: #53fc18; }
-        body { background: var(--bg-black); color: white; font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        :root { --gold: #d4af37; --dark: #0a0a0a; --card: #1a1a1a; --text: #b0b0b0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: var(--dark); color: white; padding: 40px 20px; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { color: var(--gold); text-align: center; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 40px; }
         
-        .header { text-align: center; margin-bottom: 50px; margin-top: 30px; }
-        .logo-review { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--gold); margin-bottom: 15px; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
-        h1 { color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-size: 2em; margin: 0; font-weight: 900; }
-        .subtitle { color: #888; font-size: 0.9em; letter-spacing: 1px; }
-
-        .review-container { width: 100%; max-width: 750px; }
-
-        /* TOP 1 SPOTLIGHT EFFECT (5,000 EUR) - Teraz pre NV Casino */
-        .top1-spotlight { 
-            background: linear-gradient(145deg, #1a1a1a, #000); 
-            border: 2px solid var(--gold) !important; 
-            animation: goldGlow 3s infinite alternate;
-        }
-        @keyframes goldGlow {
-            0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
-            100% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.5); }
-        }
-
         .review-card { 
-            background: var(--card-bg); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            border-radius: 30px; 
-            padding: 35px; 
-            margin-bottom: 30px; 
-            position: relative;
-            transition: 0.4s;
-        }
-        
-        .badge { position: absolute; top: -12px; right: 30px; background: var(--gold); color: black; font-size: 0.7em; font-weight: 900; padding: 6px 20px; border-radius: 12px; text-transform: uppercase; }
-        .badge-premium { background: white; color: black; }
-        .badge-standard { background: #333; color: #aaa; font-size: 0.6em; }
-
-        .card-header { display: flex; align-items: center; gap: 25px; margin-bottom: 25px; }
-        .brand-img { width: 75px; height: 75px; object-fit: contain; background: #000; border-radius: 15px; padding: 8px; border: 1px solid rgba(212, 175, 55, 0.2); }
-        .brand-info h3 { margin: 0; font-size: 1.5em; color: white; }
-        .score-tag { color: var(--kick-green); font-weight: bold; font-size: 0.85em; }
-
-        .bonus-highlight { background: rgba(212, 175, 55, 0.08); border: 1px dashed var(--gold); padding: 15px; border-radius: 15px; margin-bottom: 20px; text-align: center; }
-        .bonus-highlight strong { color: var(--gold); font-size: 1.2em; display: block; }
-
-        .standard-listing { padding: 20px; border-radius: 20px; border: 1px solid #222; margin-bottom: 15px; }
-        .standard-listing .card-header { gap: 15px; margin-bottom: 15px; }
-        .standard-listing .brand-img { width: 50px; height: 50px; }
-        .standard-listing .brand-info h3 { font-size: 1.2em; }
-
-        .btn-play { 
-            display: block; 
-            background: var(--gold); 
-            color: black; 
-            text-align: center; 
-            padding: 16px; 
-            border-radius: 12px; 
-            text-decoration: none; 
-            font-weight: 900; 
-            text-transform: uppercase;
+            background: var(--card); border-radius: 20px; border: 1px solid #333; 
+            padding: 30px; margin-bottom: 30px; display: grid; grid-template-columns: 1fr 2fr; gap: 30px;
             transition: 0.3s;
         }
-        .btn-play:hover { transform: scale(1.02); filter: brightness(1.2); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4); }
+        .review-card:hover { border-color: var(--gold); transform: scale(1.01); }
+        
+        .brand-box { text-align: center; border-right: 1px solid #333; padding-right: 30px; }
+        .rating { color: var(--gold); font-size: 1.5rem; margin: 10px 0; }
+        .tier-badge { background: var(--gold); color: black; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 0.8rem; }
+        
+        .content h2 { color: white; margin-bottom: 15px; }
+        .content p { color: var(--text); font-size: 0.95rem; margin-bottom: 20px; }
+        
+        .cta-btn { 
+            display: inline-block; padding: 12px 25px; background: transparent; 
+            border: 1px solid var(--gold); color: var(--gold); text-decoration: none; 
+            border-radius: 8px; font-weight: bold; transition: 0.3s;
+        }
+        .cta-btn:hover { background: var(--gold); color: black; }
 
-        .back-home { margin-top: 50px; color: #444; text-decoration: none; font-size: 0.9em; font-weight: bold; }
+        .back-home { display: block; text-align: center; margin-top: 50px; color: var(--text); text-decoration: none; }
+        @media (max-width: 768px) { .review-card { grid-template-columns: 1fr; } .brand-box { border-right: none; border-bottom: 1px solid #333; padding-bottom: 20px; } }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <img src="1000017793.jpg" alt="Cocktailspins Official" class="logo-review">
-    <h1>Casino Reviews</h1>
-    <p class="subtitle">EXCLUSIVE NETWORK PARTNERS | 2026 EDITION</p>
-</div>
-
-<div class="review-container">
-
-    <div class="review-card top1-spotlight">
-        <div class="badge">TOP 1 SPOTLIGHT</div>
-        <div class="card-header">
-            <img src="images (16).jpeg" class="brand-img" alt="NV Casino">
-            <div class="brand-info">
-                <h3>NV CASINO</h3>
-                <span class="score-tag">VERIFIED BY COCKTAILSPINS | 9.9/10</span>
-            </div>
+<div class="container">
+    <h1>Elite Network Reviews</h1>
+    
+    <div class="review-card">
+        <div class="brand-box">
+            <div class="tier-badge">TIER 1 PARTNER</div>
+            <div class="rating">★★★★★</div>
+            <h2>STAKE</h2>
+            <p>High Roller Choice</p>
         </div>
-        <div class="bonus-highlight">
-            <strong>100% EXCLUSIVE MATCH ON FIRST DEPOSIT</strong>
+        <div class="content">
+            <h2>The Industry Leader</h2>
+            <p>Our network analysis confirms Stake as the top-performing brand for high-intent traffic. With 24/7 support and instant withdrawals, they remain our primary recommendation for VIP players.</p>
+            <a href="#" class="cta-btn">Read Full Audit</a>
         </div>
-        <p style="font-size: 0.9em; color: #ccc;">The ultimate destination for high-limit players. NV Casino offers unmatched transparency, high withdrawal limits, and premium live tables.</p>
-        <a href="https://lnk.ua/be8BwDyN5" class="btn-play">Claim Top 1 Bonus Now</a>
     </div>
 
     <div class="review-card">
-        <div class="badge badge-premium">PREMIUM PARTNER</div>
-        <div class="card-header">
-            <img src="boatbet-logo.png" class="brand-img" alt="Boatbet">
-            <div class="brand-info">
-                <h3>BOATBET</h3>
-                <span class="score-tag">9.6/10 TRUST SCORE</span>
-            </div>
+        <div class="brand-box">
+            <div class="tier-badge">PREMIUM SLOT</div>
+            <div class="rating">★★★★★</div>
+            <h2>GAMDOM</h2>
+            <p>Best for Retention</p>
         </div>
-        <div class="bonus-highlight">
-            <strong>DAILY CASHBACK & EXCLUSIVE REWARDS</strong>
+        <div class="content">
+            <h2>Conversion King</h2>
+            <p>Gamdom's unique social features and "Rain" system ensure the highest player retention rates in the iGaming space. Perfect for long-term ROI on SEO placements.</p>
+            <a href="#" class="cta-btn">View Performance Stats</a>
         </div>
-        <p style="font-size: 0.85em; color: #aaa;">Modern krypto-friendly interface with the best VIP loyalty rewards in the market. Fast processing and 24/7 VIP support.</p>
-        <a href="https://tinyurl.com/infiaff?bid=219&lid=209&aid=SRSrWLqM3&cid=6991" class="btn-play">Get VIP Access</a>
     </div>
 
-    <h2 style="color: #444; font-size: 0.8em; text-transform: uppercase; letter-spacing: 2px; margin: 40px 0 20px;">Standard Listed Brands</h2>
-
-    <div class="review-card standard-listing">
-        <div class="badge badge-standard">Verified Listing</div>
-        <div class="card-header">
-            <img src="cropped-cropped-vavada-logo.png" class="brand-img" alt="Vavada">
-            <div class="brand-info">
-                <h3>VAVADA CASINO</h3>
-                <span class="score-tag">9.4/10 Rating</span>
-            </div>
-        </div>
-        <a href="https://vavada-official.com/" class="btn-play" style="padding: 10px; font-size: 0.8em;">Visit Site</a>
-    </div>
-
-    <div class="review-card standard-listing">
-        <div class="badge badge-standard">Verified Listing</div>
-        <div class="card-header">
-            <img src="500-Casino.png" class="brand-img" alt="500 Casino">
-            <div class="brand-info">
-                <h3>500 CASINO</h3>
-                <span class="score-tag">9.2/10 Rating</span>
-            </div>
-        </div>
-        <a href="YOUR_LINK_HERE" class="btn-play" style="padding: 10px; font-size: 0.8em;">Visit Site</a>
-    </div>
-
-    <div class="review-card standard-listing">
-        <div class="badge badge-standard">Verified Listing</div>
-        <div class="card-header">
-            <img src="betalice-casino.png" class="brand-img" alt="Betalice">
-            <div class="brand-info">
-                <h3>BETALICE</h3>
-                <span class="score-tag">9.1/10 Rating</span>
-            </div>
-        </div>
-        <a href="YOUR_LINK_HERE" class="btn-play" style="padding: 10px; font-size: 0.8em;">Visit Site</a>
-    </div>
-
-    <div class="review-card standard-listing">
-        <div class="badge badge-standard">Verified Listing</div>
-        <div class="card-header">
-            <img src="royalsea.png" class="brand-img" alt="Royalsea">
-            <div class="brand-info">
-                <h3>ROYALSEA</h3>
-                <span class="score-tag">9.0/10 Rating</span>
-            </div>
-        </div>
-        <a href="YOUR_LINK_HERE" class="btn-play" style="padding: 10px; font-size: 0.8em;">Visit Site</a>
-    </div>
-
+    <a href="index.html" class="back-home">← Back to Network Hub</a>
 </div>
-
-<a href="index.html" class="back-home">← RETURN TO MAIN HUB</a>
 
 </body>
 </html>
